@@ -41,7 +41,6 @@ def testMessage():
 def parseArgs(argv=None):
 
     parser = argparse.ArgumentParser()
-    #
     parser.add_argument("-n", "--hostname", type=str, help="set a hostname", default="localhost")
     parser.add_argument("-p","--port", type=int, help="set a port for listening", default=5000)
     parser.add_argument("-t","--threaded", action='store_true', help="enable threaded mode", default=True)
