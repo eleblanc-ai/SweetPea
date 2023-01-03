@@ -1,17 +1,20 @@
 import './App.css';
 import React, { useState } from 'react';
+import {SERVER_HOSTNAME, SERVER_PORT} from "./consts";
+
+
 
 function App() {
     const [testMessageString, setTestMessageString] = useState('');
 
     // Keep it RESTful with HTTP verbs: https://www.geeksforgeeks.org/get-and-post-method-using-fetch-api/
 
+    // Make request to the SweetPea core server's `testMessage` endpoint
     const fetchTestMessage = () => {
-        let url = "http://localhost:5000/testMessage"
+        let url = "http://"+ SERVER_HOSTNAME + ":" + SERVER_PORT + "/testMessage"
         fetch(url)
             .then(response => response.json())
             .then(data => {
-                console.log(data.testMessage)
                 setTestMessageString(data.testMessage)
             })
     }
@@ -24,6 +27,8 @@ function App() {
         </p>
       </div>
       <div className="App-main-content">
+
+          {/* Main site content */}
           <button className="App-button"
                   type="button"
                   onClick={fetchTestMessage}>Press for test message</button>

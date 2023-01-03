@@ -27,6 +27,7 @@ All you need to do is:
 ## Table of Contents
 
 * [Get started with SweetPea](#Get-started-with-SweetPea)
+  * [Install the requirements](#1.-Install-the-requirements)
 * [Demo walkthrough](#Demo-walkthrough)
 * [Next steps for you](#Next-steps-for-you)
 * [License](#License)
@@ -112,14 +113,16 @@ To create a production build, use npm run build.
 webpack compiled successfully
 
 ```
-NPM should automatically open SweetPea's core website, shown in Figure 1 below. Otherwise, you can navigate to http://localhost:3000 to visit the website in your browser, as shown in Figure 2.
-
+NPM should automatically open SweetPea's core website, shown in Figure 1 below. Otherwise, you can navigate to http://localhost:3000 to visit the website in your browser, as shown in Figure 2. 
 <p align="center">
   <img src="resources/fig/readme-figs/core-website-test.png" alt="A screen capture of the launched website with the title `SweetPea: A tiny web development kit` and a button labeled "Press for test message."/>
 </p>
 <p align="center">Figure 2. Launching the SweetPea core website.</p>
 
-*Note: The core website was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).*
+You can optionally [change the hostname and port for the core website](https://dev.to/kevinmel2000/nodejs-reactjs-change-host-and-port-number-70b).
+
+
+*Note: The SweetPea core website was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).*
 
 
 Once the core website is up and running, you can start the SweetPea core server.
@@ -162,13 +165,26 @@ options:
   -t, --threaded        enable threaded mode
   -d, --debug           enable debug mode
 ```
-You can set [additional arguments](https://flask.palletsprojects.com/en/2.2.x/api/#flask.Flask.run) for your server by editing the `app.run` call in `Server.py`. 
 
-Now that the website and server are both online, you can verify that the two can talk to each other.
+> ⚠️ If you change the server's hostname or port, you will also need to tell the website how to reach the core server. To do so, update the following constants in `core-website/src/consts.js` to reflect your changes:
+>* `SERVER_HOSTNAME`
+>* `SERVER_PORT`
+>
+>
+<!-- 
+Later: 
+"proxy":"http://localhost:5000" in package.json
+
+https://create-react-app.dev/docs/proxying-api-requests-in-development/
+
+You will also need to update the value of `proxy` in `core-website/package-json` to reflect the new port and hostname. --> 
+
+You can set [additional arguments](https://flask.palletsprojects.com/en/2.2.x/api/#flask.Flask.run) for your server by editing the `app.run` call in `Server.py`.
 
 ### Test website and server communication
 
-SweetPea's core website comes with a small demo that lets you test for communication between the website and server.
+Now that the website and server are both online, you can verify that the two can talk to each other.
+ SweetPea's core website comes with a small demo that lets you test for communication between the website and server.
 
 1. In the SweetPea core website, press the button to make a request to the server for a test message. If the request is successful, the response appears below the button, as shown in Figure 4.
 
@@ -177,7 +193,7 @@ SweetPea's core website comes with a small demo that lets you test for communica
 </p>
 <p align="center">Figure 4. Testing for communication between the core website and server.</p>
 
-To learn more about how the website and server communicate in the demo, check out the walkthrough in the next section. If you already understand how it works, skip ahead to [Next steps for you](#Next-steps-for-you).
+To learn more about how the website and server communicate in the demo, check out the walkthrough in the next section. Otherwise, skip ahead to [Next steps for you](#Next-steps-for-you).
 
 # Demo walkthrough
 
@@ -287,7 +303,7 @@ SOFTWARE.
 
 ---
 <p align="center">
-  <img src="resources/fig/sweetpea-banner.png" alt="An impressionist-style painting of a field of SweetPeas. Original image created with OpenAI's DALL·E 2."/>
+  <img style="width:100%" src="resources/fig/sweetpea-banner.png" alt="An impressionist-style painting of a field of SweetPeas. Original image created with OpenAI's DALL·E 2."/>
 
 </p>
 
