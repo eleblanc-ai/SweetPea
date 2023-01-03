@@ -94,7 +94,7 @@ Once you've installed the requirements, you can launch SweetPea's core website.
 
        npm install
 
-> ⚠️  At this step, `npm audit` (which is run automatically as part of `npm install`) is [likely to report security vulnerabilities in dependency packages](https://overreacted.io/npm-audit-broken-by-design/). You can choose to [ignore the audit report](https://www.voitanos.io/blog/don-t-be-alarmed-by-vulnerabilities-after-running-npm-install/#how-should-you-handle-these-audit-reports). Otherwise, check out NPM's documentation on [auditing dependency packages for security vulnerabilities](https://docs.npmjs.com/auditing-package-dependencies-for-security-vulnerabilities).
+> ⚠️ At this step, `npm audit` (which is run automatically as part of `npm install`) is [likely to report security vulnerabilities in dependency packages](https://overreacted.io/npm-audit-broken-by-design/). You can choose to [ignore the audit report](https://www.voitanos.io/blog/don-t-be-alarmed-by-vulnerabilities-after-running-npm-install/#how-should-you-handle-these-audit-reports). Otherwise, check out NPM's documentation on [auditing dependency packages for security vulnerabilities](https://docs.npmjs.com/auditing-package-dependencies-for-security-vulnerabilities).
 
 
 <!-- If you choose instead to dig into any warnings that come up, then I recommend first checking out NPM's documentation on [auditing packages for security vulnerabilities](https://docs.npmjs.com/auditing-package-dependencies-for-security-vulnerabilities).--> 
@@ -241,7 +241,7 @@ const fetchTestMessage = () => {
 
 
 
-3. On the server side (i.e., in `SweetPea/core-server/Server.py`), the demo uses a [Flask endpoint](https://flask.palletsprojects.com/en/2.2.x/quickstart/) called `/testMessage` that handles test message requests. Here, the server returns the string `"Hello, SweetPea!`.
+4. On the server side (i.e., in `SweetPea/core-server/Server.py`), the demo uses a [Flask endpoint](https://flask.palletsprojects.com/en/2.2.x/quickstart/) called `/testMessage` that handles test message requests. Here, the server returns the string `"Hello, SweetPea!`.
 
 ```
 @app.route("/testMessage", methods = ['GET'])
@@ -250,7 +250,7 @@ def testMessage():
 
 ```
 
-4. Back on the website side, `fetchTestMessage()` receives the server's response and updates the `testMessage` state variable. The new value will appear under the button, as shown earlier in Figure 4.
+5. Back on the website side, `fetchTestMessage()` receives the server's response and updates the `testMessage` state variable. The new value will appear under the button, as shown earlier in Figure 4.
 
 # Next steps
 
