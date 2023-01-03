@@ -226,7 +226,7 @@ def testMessage():
 
 4. Back on the website side, `fetchTestMessage()` receives the server's response and updates the `testMessage` state variable. The new value will appear under the button, as shown earlier in Figure 4.
 
-# Next steps for you
+# Next steps
 
 * If you want to start digging around the code, check out these starting points for the website and server:
 
