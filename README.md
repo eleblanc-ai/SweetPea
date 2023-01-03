@@ -241,7 +241,7 @@ def testMessage():
 
 * [Learn how to develop a Flask server](https://flask.palletsprojects.com/en/2.2.x/quickstart/#a-minimal-application).
 
-* Stay tuned for more tutorials, documentation, and new features.
+* Stay tuned for more documentation, tutorials, and new features.
 
 <!-- * If you want to see more examples of how to work with SweetPea, check out the [Tutorials](#Tutorials) page.
 

@@ -30,6 +30,9 @@ CORS(app)
 # HTTP response codes
 #https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 
+# Keep it RESTful with HTTP verbs:
+# https://pythonbasics.org/flask-http-methods/
+
 # Link relation types for hypermedia controls
 # http://www.iana.org/assignments/link-relations/link-relations.xhtml
 

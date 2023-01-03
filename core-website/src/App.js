@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 function App() {
     const [testMessageString, setTestMessageString] = useState('');
 
+    // Keep it RESTful with HTTP verbs: https://www.geeksforgeeks.org/get-and-post-method-using-fetch-api/
+
     const fetchTestMessage = () => {
         let url = "http://localhost:5000/testMessage"
         fetch(url)
