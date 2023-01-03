@@ -179,7 +179,7 @@ https://create-react-app.dev/docs/proxying-api-requests-in-development/
 
 You will also need to update the value of `proxy` in `core-website/package-json` to reflect the new port and hostname. --> 
 
-You can set [additional arguments](https://flask.palletsprojects.com/en/2.2.x/api/#flask.Flask.run) for your server by editing the `app.run` call in `Server.py`.
+You can set [additional arguments](https://flask.palletsprojects.com/en/2.2.x/api/#flask.Flask.run) for your Flask app by editing the `app.run` call in `Server.py`.
 
 ### Test website and server communication
 
