@@ -2,20 +2,20 @@
 SweetPea is a tiny web development kit. It provides a basic client-server framework that any developer can use to create dynamic web applications. It includes:
 
 * A core website for your user interface
-* A core server your back-end functionality
+* A core server for your back-end functionality
 
 
 
 All you need to do is:
 1. Build your user interface on top of the core website.
-   * [ReactJS](https://reactjs.org), [HTML](https://www.w3schools.com/html/), and [CSS](https://www.w3schools.com/css/)
+    * [ReactJS](https://reactjs.org), [HTML](https://www.w3schools.com/html/), and [CSS](https://www.w3schools.com/css/)
 
 
 2. Program your API and back-end functionality on top of the core server.
-   * [Flask](https://flask.palletsprojects.com/en/2.2.x/) and [Python](https://www.python.org/)
-   
+    * [Flask](https://flask.palletsprojects.com/en/2.2.x/) and [Python](https://www.python.org/)
 
- Figure 1 shows an overview of the SweetPea architecture.
+
+Figure 1 shows an overview of the SweetPea architecture.
 
 <p align="center">
   <img src="resources/fig/readme-figs/sweetpea-architecture.png" style="width: 85%; border: 2px solid #555" alt="A figure showing the SweetPea architecture, with the core website (or Client, implemented using REACTJS, HTML, and CSS)" making HTTP requests to and receiving responses from the API server (implemented using Flask and Python).>
@@ -27,7 +27,7 @@ All you need to do is:
 ## Table of Contents
 
 * [Get started with SweetPea](#Get-started-with-SweetPea)
-  * [Install the requirements](#1.-Install-the-requirements)
+    * [Install the requirements](#1.-Install-the-requirements)
 * [Demo walkthrough](#Demo-walkthrough)
 * [Next steps for you](#Next-steps-for-you)
 * [License](#License)
@@ -88,7 +88,7 @@ Once you've installed the requirements, you can launch SweetPea's core website.
 
        npm install
 
-> ⚠️  At this step, `npm audit` (which is run automatically as part of `npm install`) is [likely to report security vulnerabilities in dependency packages](https://overreacted.io/npm-audit-broken-by-design/). You can choose to [ignore the audit report](https://www.voitanos.io/blog/don-t-be-alarmed-by-vulnerabilities-after-running-npm-install/#how-should-you-handle-these-audit-reports). Otherwise, check out NPM's documentation on [auditing dependency packages for security vulnerabilities](https://docs.npmjs.com/auditing-package-dependencies-for-security-vulnerabilities). 
+> ⚠️  At this step, `npm audit` (which is run automatically as part of `npm install`) is [likely to report security vulnerabilities in dependency packages](https://overreacted.io/npm-audit-broken-by-design/). You can choose to [ignore the audit report](https://www.voitanos.io/blog/don-t-be-alarmed-by-vulnerabilities-after-running-npm-install/#how-should-you-handle-these-audit-reports). Otherwise, check out NPM's documentation on [auditing dependency packages for security vulnerabilities](https://docs.npmjs.com/auditing-package-dependencies-for-security-vulnerabilities).
 
 
 <!-- If you choose instead to dig into any warnings that come up, then I recommend first checking out NPM's documentation on [auditing packages for security vulnerabilities](https://docs.npmjs.com/auditing-package-dependencies-for-security-vulnerabilities).--> 
@@ -113,7 +113,7 @@ To create a production build, use npm run build.
 webpack compiled successfully
 
 ```
-NPM should automatically open SweetPea's core website, shown in Figure 1 below. Otherwise, you can navigate to http://localhost:3000 to visit the website in your browser, as shown in Figure 2. 
+NPM should automatically open SweetPea's core website, shown in Figure 1 below. Otherwise, you can navigate to http://localhost:3000 to visit the website in your browser, as shown in Figure 2.
 <p align="center">
   <img src="resources/fig/readme-figs/core-website-test.png" alt="A screen capture of the launched website with the title `SweetPea: A tiny web development kit` and a button labeled "Press for test message."/>
 </p>
@@ -153,7 +153,7 @@ You can check that the server's demo API endpoint is available by visiting http:
 </p>
 <p align="center">Figure 3. Testing the SweetPea core server's demo endpoint.</p>
 
-The server optionally accepts arguments for hostname, port, threaded mode, and debug mode, as follows:
+The server optionally accepts arguments for hostname, port, threaded mode, and debug mode as follows:
 ```
 usage: Server.py [-h] [-n HOSTNAME] [-p PORT] [-t] [-d]
 
@@ -184,7 +184,7 @@ You can set [additional arguments](https://flask.palletsprojects.com/en/2.2.x/ap
 ### Test website and server communication
 
 Now that the website and server are both online, you can verify that the two can talk to each other.
- SweetPea's core website comes with a small demo that lets you test for communication between the website and server.
+SweetPea's core website comes with a small demo that lets you test for communication between the website and server.
 
 1. In the SweetPea core website, press the button to make a request to the server for a test message. If the request is successful, the response appears below the button, as shown in Figure 4.
 
@@ -205,7 +205,7 @@ To learn more about how the website and server communicate in the demo, check ou
                    onClick={fetchTestMessage}>Press for test message</button>
 ```
 
-2. The `fetchTestMessage()` function uses [JavaScript's fetch method](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) to make an HTTP request to the server for a test message. The function then updates the value of the state variable `testMessage` with the response string.
+2. The `fetchTestMessage()` function uses [JavaScript's fetch method](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) to make an HTTP request to the server for a test message. Then, the function updates the value of the state variable `testMessage` with the response string.
 
 ```
 const fetchTestMessage = () => {
@@ -246,11 +246,11 @@ def testMessage():
 
 * If you want to start digging around the code, check out these starting points for the website and server:
 
-   * Website:
-      * `SweetPea/core-website/src/App.js`
-   * Server:
-      * `SweetPea/core-server/Server.py`
- 
+    * Website:
+        * `SweetPea/core-website/src/App.js`
+    * Server:
+        * `SweetPea/core-server/Server.py`
+
 
 * [Learn how to build a user interface with React](https://reactjs.org/tutorial/tutorial.html).
 
