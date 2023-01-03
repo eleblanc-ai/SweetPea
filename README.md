@@ -33,7 +33,7 @@ All you need to do is:
 <!-- * [Development resources](#Development-resources)-->
 
 ## Get started with SweetPea
-> These instructions were tested on a laptop running macOS Monterey 12.6 with an M1 chip.
+> ⚠️ These instructions were tested on a laptop running macOS Monterey 12.6 with an M1 chip.
 
 In a terminal, navigate to the directory where you plan to install SweetPea and clone the [repository](https://github.com/eleblanc-ai/sweetpea).
 
@@ -87,7 +87,7 @@ Once you've installed the requirements, you can launch SweetPea's core website.
 
        npm install
 
-> :warning: At this step, `npm audit` (which is run automatically as part of `npm install`) is [likely to report security vulnerabilities](https://overreacted.io/npm-audit-broken-by-design/). You can choose to [ignore the audit report](https://www.voitanos.io/blog/don-t-be-alarmed-by-vulnerabilities-after-running-npm-install/#how-should-you-handle-these-audit-reports). Otherwise, check out NPM's documentation on [auditing packages for security vulnerabilities](https://docs.npmjs.com/auditing-package-dependencies-for-security-vulnerabilities). 
+> ⚠️  At this step, `npm audit` (which is run automatically as part of `npm install`) is [likely to report security vulnerabilities](https://overreacted.io/npm-audit-broken-by-design/). You can choose to [ignore the audit report](https://www.voitanos.io/blog/don-t-be-alarmed-by-vulnerabilities-after-running-npm-install/#how-should-you-handle-these-audit-reports). Otherwise, check out NPM's documentation on [auditing packages for security vulnerabilities](https://docs.npmjs.com/auditing-package-dependencies-for-security-vulnerabilities). 
 
 
 <!-- If you choose instead to dig into any warnings that come up, then I recommend first checking out NPM's documentation on [auditing packages for security vulnerabilities](https://docs.npmjs.com/auditing-package-dependencies-for-security-vulnerabilities).--> 
