@@ -28,6 +28,9 @@ Figure 1 shows an overview of the SweetPea architecture.
 
 * [Get started with SweetPea](#Get-started-with-SweetPea)
     * [Install the requirements](#install-requirements)
+    * [Launch the SweetPea core website](#launch-core-website)
+    * [Start the SweetPea core server](#start-core-server)
+    * [Test website and server communication](#communication)
 * [Demo walkthrough](#Demo-walkthrough)
 * [Next steps for you](#Next-steps-for-you)
 * [License](#License)
@@ -84,6 +87,8 @@ Werkzeug 2.2.2 -->
 
 Once you've installed the requirements, you can launch SweetPea's core website.
 
+<a name="launch-core-website">
+
 ### 2. Launch the SweetPea core website
 1. Install the core website's package modules from the `SweetPea/core-website` directory.
 
@@ -127,6 +132,8 @@ You can optionally [change the hostname and port for the core website](https://d
 
 
 Once the core website is up and running, you can start the SweetPea core server.
+
+<a name="start-core-server">
 
 ### 3. Start the SweetPea core server
 The server is a [basic Flask app](https://flask.palletsprojects.com/en/1.1.x/quickstart/#a-minimal-application) that includes one test endpoint called `testMessage`.
@@ -182,7 +189,9 @@ You will also need to update the value of `proxy` in `core-website/package-json`
 
 You can set [additional arguments](https://flask.palletsprojects.com/en/2.2.x/api/#flask.Flask.run) for your Flask app by editing the `app.run` call in `Server.py`.
 
-### Test website and server communication
+<a name="communication">
+
+### 4. Test website and server communication
 
 Now that the website and server are both online, you can verify that the two can talk to each other.
 SweetPea's core website comes with a small demo that lets you test for communication between the website and server.
