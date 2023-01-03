@@ -87,7 +87,7 @@ Once you've installed the requirements, you can launch SweetPea's core website.
 
        npm install
 
-> ⚠️  At this step, `npm audit` (which is run automatically as part of `npm install`) is [likely to report security vulnerabilities](https://overreacted.io/npm-audit-broken-by-design/). You can choose to [ignore the audit report](https://www.voitanos.io/blog/don-t-be-alarmed-by-vulnerabilities-after-running-npm-install/#how-should-you-handle-these-audit-reports). Otherwise, check out NPM's documentation on [auditing packages for security vulnerabilities](https://docs.npmjs.com/auditing-package-dependencies-for-security-vulnerabilities). 
+> ⚠️  At this step, `npm audit` (which is run automatically as part of `npm install`) is [likely to report security vulnerabilities](https://overreacted.io/npm-audit-broken-by-design/). You can choose to [ignore the audit report](https://www.voitanos.io/blog/don-t-be-alarmed-by-vulnerabilities-after-running-npm-install/#how-should-you-handle-these-audit-reports). Otherwise, check out NPM's documentation on [auditing dependency packages for security vulnerabilities](https://docs.npmjs.com/auditing-package-dependencies-for-security-vulnerabilities). 
 
 
 <!-- If you choose instead to dig into any warnings that come up, then I recommend first checking out NPM's documentation on [auditing packages for security vulnerabilities](https://docs.npmjs.com/auditing-package-dependencies-for-security-vulnerabilities).--> 
@@ -112,7 +112,7 @@ To create a production build, use npm run build.
 webpack compiled successfully
 
 ```
-At this point, NPM should automatically open SweetPea's core website, shown in Figure 1 below. Otherwise, you can navigate to http://localhost:3000 to visit the website in your browser, as shown in Figure 2.
+NPM should automatically open SweetPea's core website, shown in Figure 1 below. Otherwise, you can navigate to http://localhost:3000 to visit the website in your browser, as shown in Figure 2.
 
 <p align="center">
   <img src="resources/fig/readme-figs/core-website-test.png" alt="A screen capture of the launched website with the title `SweetPea: A tiny web development kit` and a button labeled "Press for test message."/>
