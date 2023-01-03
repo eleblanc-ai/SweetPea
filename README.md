@@ -41,6 +41,7 @@ In a terminal, navigate to the directory where you plan to install SweetPea and 
     git clone https://github.com/eleblanc-ai/SweetPea.git
 
 <a name="install-requirements">
+
 ### 1. Install the requirements
 There are a few ways to install the project requirements. I used [Homebrew](https://brew.sh/), [NPM](https://docs.npmjs.com/), and [pip](https://pip.pypa.io/en/stable/).
 
