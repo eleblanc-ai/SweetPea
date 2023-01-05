@@ -22,7 +22,30 @@ Figure 1 shows an overview of the SweetPea architecture.
 </p>
 <p align="center">Figure 1. SweetPea architecture overview.</p>
 
-**Disclaimer:** SweetPea is intended for prototyping, learning, and having fun with web applications. SweetPea is yet to become a website builder, hosting service, or production environment.
+**Friendly disclaimer:** SweetPea is intended for prototyping, learning, and having fun with web applications. SweetPea is yet to become a website builder, hosting service, or production environment.
+
+## Release Notes
+<!-- Semantic versioning: https://semver.org/-->
+<!-- Major change x.0.0
+     Minor change 0.x.0
+     Bug fix      0.0.x -->
+
+<!-- https://simonwillison.net/2022/Jan/31/release-notes/ -->
+<!-- https://www.productplan.com/learn/release-notes-best-practices/ -->
+
+* **Version**: v1.0.0
+* **Date**: Jan 5, 2023
+* **Features**:
+  * Core website:
+    * Ready-to-develop front end _(React 18.2.0)_
+      * Blank React web app _(bootstrapped with [Create React App](https://github.com/facebook/create-react-app))_
+      * Demo UI element
+  * Core server: 
+    * Ready-to-develop back end _(Flask 2.2.2)_
+      * Functional server for API and backend functionality
+      * Demo endpoint
+
+[See all release notes.](docs/releases.md)
 
 ## Table of Contents
 
@@ -127,8 +150,6 @@ NPM should automatically open SweetPea's core website, shown in Figure 1 below. 
 
 You can optionally [change the hostname and port for the core website](https://dev.to/kevinmel2000/nodejs-reactjs-change-host-and-port-number-70b).
 
-
-*Note: The SweetPea core website was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).*
 
 
 Once the core website is up and running, you can start the SweetPea core server.
