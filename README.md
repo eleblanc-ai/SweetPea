@@ -33,7 +33,7 @@ SweetPea is intended for prototyping, learning, and having fun with web applicat
 <!-- https://simonwillison.net/2022/Jan/31/release-notes/ -->
 <!-- https://www.productplan.com/learn/release-notes-best-practices/ -->
 
-* **Version**: v1.0.0
+* **Version**: 1.0.0
 * **Date**: Jan 5, 2023
 * **Features**:
   * Core website:
