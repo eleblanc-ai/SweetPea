@@ -41,28 +41,30 @@ CORS(app)
 def testMessage():
   return {'testMessage': "Hello, SweetPea!"}
 
+# Parse any arguments, or set to default values.
 def parseArgs(argv=None):
 
     parser = argparse.ArgumentParser()
+
+    # hostname
     parser.add_argument("-n", "--hostname", type=str, help="set a hostname", default="localhost")
+
+    # port
     parser.add_argument("-p","--port", type=int, help="set a port for listening", default=5000)
+
+    # threaded
     parser.add_argument("-t","--threaded", action='store_true', help="enable threaded mode", default=True)
+
+    # debug mode
     parser.add_argument("-d","--debug", action='store_true', help="enable debug mode", default=True)
 
     return parser.parse_args()
 
+# Start the app when the module is run as "__main__".
 if __name__ == "__main__":
+
+    # Parse any arguments with parseArgs()
     args = parseArgs(sys.argv)
+
+    # Run the Flask app using user and/or default arguments
     app.run(threaded=args.threaded, host=args.hostname, port=args.port, debug=args.debug)
-
-#########################################################################################
-# When the Python interpreter runs a module (.py), it sets the module's __name__ variable to "__main__". However, if the module is loaded via import by another main program, that module's __name__ variable will be set to the module's name.
-
-# An import will result in the module being run, which is not usually what we want. To avoid this, we put up a safeguard by testing to see if the interpreter is running this module as the main program. If it is, we start the app.
-
-# General reference
-#   * https://www.freecodecamp.org/news/if-name-main-python-example/
-
-# Flask-specific reference
-#   * https://flask-ptbr.readthedocs.io/en/latest/quickstart.html
-#########################################################################################

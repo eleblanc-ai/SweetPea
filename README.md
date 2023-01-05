@@ -22,7 +22,7 @@ Figure 1 shows an overview of the SweetPea architecture.
 </p>
 <p align="center">Figure 1. SweetPea architecture overview.</p>
 
-**Friendly disclaimer:** SweetPea is intended for prototyping, learning, and having fun with web applications. SweetPea is yet to become a website builder, hosting service, or production environment.
+SweetPea is intended for prototyping, learning, and having fun with web applications. SweetPea is yet to become a website builder, hosting service, or production environment.
 
 ## Release Notes
 <!-- Semantic versioning: https://semver.org/-->
