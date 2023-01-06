@@ -1,4 +1,4 @@
-# Adding back-end functionality
+# Adding back-end functionality to the core server
 
 Write any Python function you want. For example, the following function `mySquareFunction()` returns the square of the argument `x` if it is a numeric type.
 

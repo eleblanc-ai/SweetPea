@@ -283,10 +283,15 @@ def testMessage():
         * `SweetPea/core-server/Server.py`
 
 
+* Check out a tutorial:
+  * [Adding back-end functionality to the core server](docs/back-end-functionality.md)
+
+
 * [Learn how to build a user interface with React](https://reactjs.org/tutorial/tutorial.html).
 
 
 * [Learn how to develop a Flask server](https://flask.palletsprojects.com/en/2.2.x/quickstart/#a-minimal-application).
+
 
 * Stay tuned for more documentation, tutorials, and new features.
 
