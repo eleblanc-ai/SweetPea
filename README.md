@@ -238,7 +238,7 @@ To learn more about how the website and server communicate in the demo, check ou
 
 2. The `fetchTestMessage()` function uses [JavaScript's fetch method](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) to make an HTTP request to the server for a test message. Then, the function updates the value of the state variable `testMessage` with the response string.
 
-```
+``` 
 const fetchTestMessage = () => {
   let url = "http://localhost:5000/testMessage"
   fetch(url)

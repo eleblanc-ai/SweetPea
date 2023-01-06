@@ -1,11 +1,42 @@
 import sys
 import argparse
 
-from flask import Flask
+from flask import Flask, request, jsonify
 from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
+
+# Return a test message to the client
+@app.route("/testMessage", methods = ['GET'])
+def testMessage():
+  return jsonify({'testMessage': "Hello, SweetPea!"})
+
+# Return parsed command line arguments and/or those set to default values.
+def parseArgs(argv=None):
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-n", "--hostname", type=str, help="set a hostname", default="localhost")
+    parser.add_argument("-p","--port", type=int, help="set a port for listening", default=5000)
+    parser.add_argument("-t","--threaded", action='store_true', help="enable threaded mode", default=True)
+    parser.add_argument("-d","--debug", action='store_true', help="enable debug mode", default=True)
+
+    return parser.parse_args()
+
+# Start the app when the module is run as "__main__".
+if __name__ == "__main__":
+
+    # Parse any arguments with parseArgs()
+    args = parseArgs(sys.argv)
+
+    # Run the Flask app using user and/or default arguments
+    app.run(threaded=args.threaded, host=args.hostname, port=args.port, debug=args.debug)
+
+
+
+# RESOURCES
+###################################################
+
 # Documenting an API
 # https://www.freecodecamp.org/news/how-to-write-api-documentation-like-a-pro/
 
@@ -36,35 +67,4 @@ CORS(app)
 # Link relation types for hypermedia controls
 # http://www.iana.org/assignments/link-relations/link-relations.xhtml
 
-# returns a test message to the client
-@app.route("/testMessage", methods = ['GET'])
-def testMessage():
-  return {'testMessage': "Hello, SweetPea!"}
 
-# Parse any arguments, or set to default values.
-def parseArgs(argv=None):
-
-    parser = argparse.ArgumentParser()
-
-    # hostname
-    parser.add_argument("-n", "--hostname", type=str, help="set a hostname", default="localhost")
-
-    # port
-    parser.add_argument("-p","--port", type=int, help="set a port for listening", default=5000)
-
-    # threaded
-    parser.add_argument("-t","--threaded", action='store_true', help="enable threaded mode", default=True)
-
-    # debug mode
-    parser.add_argument("-d","--debug", action='store_true', help="enable debug mode", default=True)
-
-    return parser.parse_args()
-
-# Start the app when the module is run as "__main__".
-if __name__ == "__main__":
-
-    # Parse any arguments with parseArgs()
-    args = parseArgs(sys.argv)
-
-    # Run the Flask app using user and/or default arguments
-    app.run(threaded=args.threaded, host=args.hostname, port=args.port, debug=args.debug)
