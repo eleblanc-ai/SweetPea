@@ -248,9 +248,9 @@ SweetPea's core website comes with a small demo that lets you test for communica
 * If you want to start digging around the code, check out these starting points for the website and server:
 
     * Website:
-        * [core-website/src/App.js](core-website/src/App.js)
+        * [`core-website/src/App.js`](core-website/src/App.js)
     * Server:
-        * [core-server/Server.py](core-server/Server.py)
+        * [`core-server/Server.py`](core-server/Server.py)
 
 
 <!--
