@@ -27,7 +27,7 @@ Add your new function to the core server by importing it or adding it directly i
 You can test that the route is available by starting the core server (e.g., `python3 Server.py`) and visiting http://localhost:5000/mySquare in a browser window, as shown in Figure 1.
 
 <p align="center">
-  <img src="fig/step-3-test.png" style="width: 90%" alt="A view of the mySquare endpoint accessed in a browser window. A JSON object called "response" is displayed."/>
+  <img src="fig/step-3-test.png" style="width: 70%" alt="A view of the mySquare endpoint accessed in a browser window. A JSON object called "response" is displayed."/>
 </p>
 <p align="center">Figure 1. Testing the <tt>/mySquare</tt> endpoint.  </p>
 
@@ -63,7 +63,7 @@ You can test that the route is available by starting the core server (e.g., `pyt
 You can test that the `/mySquare` route is working using a test value `x=2` by visiting http://localhost:5000/mySquare?x=2 in the browser (see Figure 2).
 
 <p align="center">
-  <img src="fig/final-test.png" style="width: 90%" alt="A view of the mySquare endpoint  accessed with argument `x=2` in a browser window. A JSON object called "response" displays with the value 4."/>
+  <img src="fig/final-test.png" style="width: 70%" alt="A view of the mySquare endpoint  accessed with argument `x=2` in a browser window. A JSON object called "response" displays with the value 4."/>
 </p>
 <p align="center">Figure 1. Testing the <tt>/mySquare</tt> endpoint with argument <tt>x=2</tt>.  </p>
 
