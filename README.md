@@ -226,7 +226,7 @@ SweetPea's core website comes with a small demo that lets you test for communica
 
 
 # Next steps for you
-* To learn more about how the website and server communicate in the demo, check out the [Demo walkthrough](docs/demo-walkthrough.md)
+* To learn more about how the website and server communicated in the demo, check out the [Demo walkthrough](docs/demo-walkthrough.md)
 
 * If you want to start digging around the code, check out these starting points for the website and server:
 
