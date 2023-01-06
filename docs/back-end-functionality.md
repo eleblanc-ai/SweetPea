@@ -71,4 +71,5 @@ You can test that the `/mySquare` route is working using a test value `x=2` by v
 * Create new functionality and endpoints, for example:
    * Query a database
    * Serve a file
+   * Return the result of a different computation
 * Stay tuned for a tutorial on accessing an endpoint from the core website.
