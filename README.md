@@ -227,15 +227,21 @@ SweetPea's core website comes with a small demo that lets you test for communica
 # Next steps for you
 * To learn more about how the website and server communicated in the demo, check out the [demo walkthrough](docs/demo-walkthrough.md).
 
+* If you want to start digging around the code, check out these starting points for the website and server:
 
-* Check out a tutorial:
+    * Website:
+        * [`core-website/src/App.js`](core-website/src/App.js)
+    * Server:
+        * [`core-server/Server.py`](core-server/Server.py)
+
+
+* Try a tutorial:
   * [Adding back-end functionality to the core server](docs/back-end-functionality.md)
 
 
-* [Learn how to build a user interface with React](https://reactjs.org/tutorial/tutorial.html).
-
-
-* [Learn how to develop a Flask server](https://flask.palletsprojects.com/en/2.2.x/quickstart/#a-minimal-application).
+* Check out some external resources:
+  * [Learn how to build a user interface with React](https://reactjs.org/tutorial/tutorial.html).
+  * [Learn how to develop a Flask server](https://flask.palletsprojects.com/en/2.2.x/quickstart/#a-minimal-application).
 
 
 * Stay tuned for more documentation, tutorials, and new features.
@@ -245,12 +251,6 @@ SweetPea's core website comes with a small demo that lets you test for communica
 
 * If you want to learn more about what's going on under the hood, head over to [System documentation](TBD). -->
 
-* If you want to start digging around the code, check out these starting points for the website and server:
-
-    * Website:
-        * [`core-website/src/App.js`](core-website/src/App.js)
-    * Server:
-        * [`core-server/Server.py`](core-server/Server.py)
 
 
 <!--
