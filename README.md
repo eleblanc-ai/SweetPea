@@ -54,7 +54,6 @@ SweetPea is intended for prototyping, learning, and having fun with web applicat
     * [Launch the SweetPea core website](#launch-core-website)
     * [Start the SweetPea core server](#start-core-server)
     * [Test website and server communication](#communication)
-* [Demo walkthrough](#Demo-walkthrough)
 * [Next steps for you](#Next-steps-for-you)
 * [License](#License)
 <!-- * [Development resources](#Development-resources)-->
@@ -226,7 +225,7 @@ SweetPea's core website comes with a small demo that lets you test for communica
 
 
 # Next steps for you
-* To learn more about how the website and server communicated in the demo, check out the [Demo walkthrough](docs/demo-walkthrough.md)
+* To learn more about how the website and server communicated in the demo, check out the [demo walkthrough](docs/demo-walkthrough.md)
 
 * If you want to start digging around the code, check out these starting points for the website and server:
 
