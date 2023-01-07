@@ -1,6 +1,6 @@
 # Adding back-end functionality to the core server
 
-Write any Python function you want. For example, the following function `mySquareFunction()` returns the square of the argument `x` if it is a numeric type.
+Write any Python function you want. For example, the following function `mySquareFunction()` returns the square of `x` (if it is a numeric type).
 
        def mySquareFunction(x):
 
@@ -9,7 +9,10 @@ Write any Python function you want. For example, the following function `mySquar
            except:
                return "Invalid argument, expected a numeric type."
 
-Add your new function to the core server by importing it or adding it directly into `core-server/Server.py`. Make the new function accessible via HTTP using the following steps.
+Add your new function to the core server by importing it or adding it directly into `core-server/Server.py`. 
+
+
+Follow these steps to make the new function accessible to your website via HTTP.
 
 ## Create a new endpoint
 1. In `core-server/Server.py`, add a new [route decorator](https://flask.palletsprojects.com/en/2.2.x/api/#flask.Flask.route) named after your function. In this example, the endpoint `/mySquare` is configured to respond to `GET` requests:
