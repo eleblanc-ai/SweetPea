@@ -45,7 +45,7 @@ Figure 1 shows an overview of the SweetPea architecture.
             * Functional server for API and backend functionality
             * Demo endpoint
 * **Bug fix**:
-    * `core-website/package.json`: changed `npm start` port from incorrect 4242 back to default 3000.
+    * `core-website/package.json`: changed `npm start` port from (incorrect) 4242 back to default 3000.
 
 [See all release notes.](docs/releases.md)
 

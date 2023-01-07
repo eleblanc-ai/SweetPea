@@ -20,7 +20,7 @@ This page contains all release notes for SweetPea.
             * Functional server for API and backend functionality
             * Demo endpoint
 * **Bug fix**:
-  * `core-website/package.json`: changed `npm start` port from incorrect 4242 back to default 3000.
+  * `core-website/package.json`: changed `npm start` port from (incorrect) 4242 back to default 3000.
 ---
 
 
