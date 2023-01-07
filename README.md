@@ -101,6 +101,10 @@ Python 3.10.6 -->
 
        pip3 install Flask
 
+5. [Flask-cors](https://flask.palletsprojects.com/en/2.2.x/) -- *a Flask extension for handling Cross Origin Resource Sharing (CORS)*
+
+       pip3 install flask-cors
+
 <!-- $ flask --version
 
 Python 3.10.6
