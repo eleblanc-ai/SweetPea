@@ -1,5 +1,5 @@
 # Create web applications with SweetPea
-SweetPea is a tiny web development kit. It provides a basic client-server framework that any developer can use to create dynamic web applications. It includes:
+SweetPea is a tiny web development kit. It provides a basic client-server framework that any developer can use to create dynamic web applications. SweetPea is intended for prototyping, learning, and having fun with web applications. It includes:
 
 * A core website for your user interface
 * A core server for your back-end functionality
@@ -22,7 +22,7 @@ Figure 1 shows an overview of the SweetPea architecture.
 </p>
 <p align="center">Figure 1. SweetPea architecture overview.</p>
 
-SweetPea is intended for prototyping, learning, and having fun with web applications. SweetPea is yet to become a website builder, hosting service, or production environment.
+ SweetPea is yet to become a website builder, hosting service, or production environment.
 
 ## Release Notes
 <!-- Semantic versioning: https://semver.org/-->
