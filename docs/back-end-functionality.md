@@ -1,6 +1,6 @@
-# Adding functionality to the Core Server
+# Adding functionality to the core server
 
-The SweetPea Core Server provides HTTP access to your behind-the-scenes functionality (e.g., database access, computations, user management). It serves your Application Programming Interface (API) and runs your supporting code according to HTTP requests from the SweetPea Core Website.
+The core server provides HTTP access to your behind-the-scenes functionality (e.g., database access, computations, user management). It serves your Application Programming Interface (API) and runs your supporting code according to HTTP requests from the core website.
 
 This tutorial walks through adding a new piece of functionality to the core server, covering three high-level steps:
 1. [Writing a function](#Writing-a-function) 
@@ -21,7 +21,7 @@ In `core-server/Server.py`, write a function called `mySquare()` that returns th
             return "Invalid argument, expected a numeric type."
 
 
- ✏️ You can choose to [import functions](https://docs.python.org/3/tutorial/modules.html) into the Core Server, rather than writing them directly into `Server.py`.
+ ✏️ You can choose to [import functions](https://docs.python.org/3/tutorial/modules.html) into the core server, rather than writing them directly into `Server.py`.
 
 
 ## Mapping a URL path to the function
