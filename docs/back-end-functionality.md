@@ -1,78 +1,103 @@
-# Adding back-end functionality to the core server
+# Adding functionality to the Core Server
 
-Write any Python function you want. For example, the following function `mySquareFunction()` returns the square of `x` (if it is a numeric type).
+The SweetPea Core Server provides HTTP access to your behind-the-scenes functionality (e.g., database access, computations, user management). It serves your Application Programming Interface (API) and runs your supporting code according to HTTP requests from the SweetPea Core Website.
 
-       def mySquareFunction(x):
+This tutorial walks through adding a new piece of functionality to the core server, covering three high-level steps:
+1. [Writing a function](#Writing-a-function) 
+2. [Mapping a URL path to the function](#Mapping-a-URL-path-to-the-function)
+3. [Handling HTTP requests](#Handling-HTTP-requests)
 
-           try:
-               return x*x
-           except:
-               return "Invalid argument, expected a numeric type."
+This doc assumes some advance knowledge of [Python](https://www.python.org/), [HTTP APIs](https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flask#what-is-an-api) (and [related terminology](https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flask#api-terminology)), and the [anatomy of a URL](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL).
 
-Add your new function to the core server by importing it or adding it directly into `core-server/Server.py`. 
+## Writing a function
+
+In `core-server/Server.py`, write a function called `mySquare()` that returns the square of `x` (if `x` is numeric). 
+
+    def mySquare(x):
+
+        try:
+            return x*x
+        except:
+            return "Invalid argument, expected a numeric type."
 
 
-Follow these steps to make the new function accessible to your website via HTTP.
+ ✏️ You can choose to [import functions](https://docs.python.org/3/tutorial/modules.html) into the Core Server, rather than writing them directly into `Server.py`.
 
-## Create a new endpoint
-1. In `core-server/Server.py`, add a new [route decorator](https://flask.palletsprojects.com/en/2.2.x/api/#flask.Flask.route) named after your function. In this example, the endpoint `/mySquare` is configured to respond to `GET` requests:
 
-       @app.route("/mySquare", methods = ['GET'])
+## Mapping a URL path to the function
+Now that we have a function, we need to make it accessible via HTTP.
 
-2. Under the route decorator, define a [view function](https://flask.palletsprojects.com/en/2.2.x/tutorial/views/#:~:text=A%20view%20function%20is%20the,turns%20into%20an%20outgoing%20response.) named after your function that returns a JSON object. We'll build out this function to handle responses for the `/mySquare` route.
+To do so, we use a [route decorator](https://flask.palletsprojects.com/en/2.2.x/api/#flask.Flask.route) to map the [URL path](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#path_to_resource) `/mySquare` to the function `mySquare()`. The `methods` argument tells Flask that only [`GET` requests](https://www.w3schools.com/tags/ref_httpmethods.asp) are allowed for this URL.
 
-       @app.route("/mySquare", methods = ['GET'])
-       def mySquare():
-           return jsonify({'response':'/mySquare'})
+    @app.route("/mySquare", methods = ['GET'])
+    def mySquare():
 
-3. At this point in the example, the `/mySquare` has been mapped to the `mySquare()` function in the core server.
+        try:
+            return x*x
+        except:
+            return "Invalid argument, expected a numeric type."
 
-You can test that the route is available by starting the core server (e.g., `python3 Server.py`) and visiting http://localhost:5000/mySquare in a browser window, as shown in Figure 1.
+Now, if `Server.py` is running on http://localhost:5000, then you should be able to test access this function by visiting http://localhost:5000/mySquare. 
 
-<p align="center">
-  <img src="fig/step-3-test.png" style="width: 70%" alt="A view of the mySquare endpoint accessed in a browser window. A JSON object called "response" is displayed."/>
-</p>
-<p align="center">Figure 1. Testing the <tt>/mySquare</tt> endpoint.  </p>
+Note also that `x` has been removed from the signature of `mySquare()`. In the next step, we'll add logic to `mySquare` to get the value of `x` from an incoming HTTP request.
 
-## Handle HTTP requests to the endpoint
+## Handling HTTP requests
+### Parsing query parameters as arguments
+Next, update `mySquare()` to parse and use [parameters from an incoming query string](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#parameters), rather than from the signature of the function. 
 
-1. In the view function, save the request arguments in a dictionary called `args`. Then save the value of `x` in args to a local variable.
+    @app.route("/mySquare", methods = ['GET'])
+    def mySquare():
 
-       @app.route("/mySquare", methods = ['GET'])
-       def mySquare():
-           args = dict(request.args.items())
-           x = args['x']
+        args = dict(request.args().items)
 
-2. Call your imported function using the parsed arguments.
+        try:
+            x = int(args['x'])
+            return x*x
 
-       @app.route("/mySquare", methods = ['GET'])
-       def mySquare():
-           args = dict(request.args.items())
-           x = int(args['x'])
+        except:
+            return "Invalid argument, expected a numeric type."
 
-           square = mySquareFunction(x)
+Here, we use Flask's [Request object](https://flask.palletsprojects.com/en/1.1.x/quickstart/#accessing-request-data) to access the arguments of an HTTP request and save them in a dictionary. Them, we try to cast the value of `x` to an integer and return its square. 
 
-3. Respond to the request with the return value of your function.
+### Responding with JSON objects
+The final step is to modify the `return` statements in `mySquare()` to respond with JSON objects. We use Flask's [jsonify method](https://flask.palletsprojects.com/en/2.2.x/api/#flask.json.jsonify), imported at the top of `Server.py`, to return JSON objects. In this case, the return objects will contain either the square of `x` or the error message. 
 
-       @app.route("/mySquare", methods = ['GET'])
-       def mySquare():
-           args = dict(request.args.items())
-           x = int(args['x'])
+    @app.route("/mySquare", methods = ['GET'])
+    def mySquare():
 
-           square = mySquareFunction(x)
+        args = dict(request.args.items())
 
-           return jsonify({'response':square})
+        try:
+            x = int(args['x'])
+            return jsonify({"response":x*x})
 
-You can test that the `/mySquare` route is working using a test value `x=2` by visiting http://localhost:5000/mySquare?x=2 in the browser (see Figure 2).
+        except:
+            return jsonify({"response":"Invalid argument, expected a numeric type."})
+
+## Test the URL in the browser
+
+You can test that the `/mySquare` path is working using a test value `x=2` by visiting http://localhost:5000/mySquare?x=2 in the browser (see Figure 2).
 
 <p align="center">
   <img src="fig/final-test.png" style="width: 70%" alt="A view of the mySquare endpoint  accessed with argument `x=2` in a browser window. A JSON object called "response" displays with the value 4."/>
 </p>
 <p align="center">Figure 1. Testing the <tt>/mySquare</tt> endpoint with argument <tt>x=2</tt>.  </p>
 
-## Next
-* Create new functionality and endpoints, for example:
-   * Query a database
-   * Serve a file
-   * Return the result of a different computation
-* Stay tuned for a tutorial on accessing an endpoint from the core website.
+Congratulations, you can now add functionality to the core server! In practice, you can add whatever functions you want using any number of libraries, languages, APIs, and databases. Just make sure that the end result can be packaged as a JSON object and you're good to go.
+
+
+---
+## What's next?
+* Write a new function, such as one that:
+  * queries a database
+  * serves a file
+  * returns the result of another computation
+  
+
+* Stay tuned for a tutorial on accessing your core server functionality from the core website.
+
+
+
+
+
+
