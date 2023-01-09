@@ -1,10 +1,10 @@
-# Adding functionality to the core server
+# Adding an API endpoint to the core server
 
 The core server provides HTTP access to your behind-the-scenes functionality (e.g., database access, computations, user management). It serves your Application Programming Interface (API) and runs your supporting code according to HTTP requests from the core website.
 
-This tutorial walks through adding a new piece of functionality to the core server, covering three high-level steps:
+An API endpoint is a [URL path](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#path_to_resource) mapped to a function in the core server. This tutorial walks through adding a new endpoint (w/ supporting code) to the core server, covering three high-level steps:
 1. [Writing a function](#Writing-a-function) 
-2. [Mapping a URL path to the function](#Mapping-a-URL-path-to-the-function)
+2. [Creating the endpoint](#Creating-the-endpoint)
 3. [Handling HTTP requests](#Handling-HTTP-requests)
 
 This doc assumes some advance knowledge of [Python](https://www.python.org/), [HTTP APIs](https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flask#what-is-an-api) (and [related terminology](https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flask#api-terminology)), and the [anatomy of a URL](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL).
@@ -24,10 +24,10 @@ In `core-server/Server.py`, write a function called `mySquare()` that returns th
  ✏️ You can choose to [import functions](https://docs.python.org/3/tutorial/modules.html) into the core server, rather than writing them directly into `Server.py`.
 
 
-## Mapping a URL path to the function
+## Creating the endpoint
 Now that we have a function, we need to make it accessible via HTTP.
 
-To do so, we use a [route decorator](https://flask.palletsprojects.com/en/2.2.x/api/#flask.Flask.route) to map a new endpoint called `/mySquare` to the function `mySquare()`. The `methods` argument tells Flask that only [`GET` requests](https://www.w3schools.com/tags/ref_httpmethods.asp) are allowed for this URL.
+To do so, we use a [route decorator](https://flask.palletsprojects.com/en/2.2.x/api/#flask.Flask.route) to map a new endpoint called `/mySquare` to the function `mySquare()`. The `methods` argument tells Flask that only [`GET` requests](https://www.w3schools.com/tags/ref_httpmethods.asp) are allowed for this URL path.
 
     @app.route("/mySquare", methods = ['GET'])
     def mySquare():
