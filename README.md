@@ -43,7 +43,7 @@ Figure 1 shows an overview of the SweetPea architecture.
     * Core server:
         * Ready-to-develop back end _(Flask 2.2.2)_
             * Functional server for API and backend functionality
-            * Demo endpoint
+            * Demo endpoint and function
 * **Bug fix**:
     * `core-website/package.json`: changed `npm start` port from (incorrect) 4242 back to default 3000.
 
