@@ -86,7 +86,6 @@ With the core server running (e.g., `python3 Server.py`), you can test that the 
 Congratulations, you can now add functionality to the core server! In practice, you can add whatever functions you want using any number of libraries, languages, APIs, and databases. Just make sure that the end result can be packaged as a JSON object and you're all set.
 
 
----
 ## What's next?
 * Try adding new functionality, for instance:
   * Query a SQL database
