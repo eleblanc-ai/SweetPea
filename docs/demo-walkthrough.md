@@ -43,4 +43,4 @@ def testMessage():
 
 ```
 
-5. Back on the website side, `fetchTestMessage()` receives the server's response and updates the `testMessage` state variable. The new value will appear under the button, as shown earlier in Figure 4.
+5. Back on the website side, `fetchTestMessage()` receives the server's response and updates the `testMessage` state variable. The new value appears under the button, as shown earlier in Figure 4.
