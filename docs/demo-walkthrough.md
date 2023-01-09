@@ -61,7 +61,7 @@ Back on the website side, `fetchTestMessage()` receives the server's response an
 
 
 * Try a tutorial:
-    * [Adding functionality to the core server
+    * [Adding an API endpoint to the core server
       ](docs/back-end-functionality.md)
 
 
