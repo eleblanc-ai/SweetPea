@@ -27,7 +27,7 @@ In `core-server/Server.py`, write a function called `mySquare()` that returns th
 ## Mapping a URL path to the function
 Now that we have a function, we need to make it accessible via HTTP.
 
-To do so, we use a [route decorator](https://flask.palletsprojects.com/en/2.2.x/api/#flask.Flask.route) to map a new core server [URL path](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#path_to_resource) `/mySquare` to the function `mySquare()`. The `methods` argument tells Flask that only [`GET` requests](https://www.w3schools.com/tags/ref_httpmethods.asp) are allowed for this URL.
+To do so, we use a [route decorator](https://flask.palletsprojects.com/en/2.2.x/api/#flask.Flask.route) to map a new endpoint called `/mySquare` to the function `mySquare()`. The `methods` argument tells Flask that only [`GET` requests](https://www.w3schools.com/tags/ref_httpmethods.asp) are allowed for this URL.
 
     @app.route("/mySquare", methods = ['GET'])
     def mySquare():
@@ -76,7 +76,7 @@ The final step is to modify the `return` statements in `mySquare()` to respond w
 
 ## Test the URL in the browser
 
-With the core server running (e.g., `python3 Server.py`), you can test that the `/mySquare` path is working using a test value `x=2` by visiting http://localhost:5000/mySquare?x=2 in the browser (see Figure 2).
+With the core server running (e.g., `python3 Server.py`), you can test that the `/mySquare` endpoint is working using a test value `x=2` by visiting http://localhost:5000/mySquare?x=2 in the browser (see Figure 2).
 
 <p align="center">
   <img src="fig/final-test.png" style="width: 70%" alt="A view of the mySquare endpoint  accessed with argument `x=2` in a browser window. A JSON object called "response" displays with the value 4."/>

@@ -5,6 +5,7 @@
 </p>
 <p align="center">Figure 1. SweetPea.</p> 
 
+
 On the website side (i.e., in `SweetPea/core-website/src/App.js`), the demo uses the `onClick()` function of an HTML button to request a test message from the server.
 
 ```
@@ -13,7 +14,7 @@ On the website side (i.e., in `SweetPea/core-website/src/App.js`), the demo uses
                    onClick={fetchTestMessage}>Press for test message</button>
 ```
 
-Next, the `fetchTestMessage()` function uses [JavaScript's fetch method](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) to make an HTTP request to the server for a test message. Then, the function updates the value of the state variable `testMessage` with the response string.
+Next, the `fetchTestMessage()` function uses [JavaScript's fetch method](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) to make an HTTP request to the server for a test message at the `testMessage` endpoint. Then, the function updates the value of the state variable `testMessage` with the response string.
 
 ``` 
 const fetchTestMessage = () => {

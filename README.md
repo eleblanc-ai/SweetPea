@@ -181,7 +181,7 @@ Press CTRL+C to quit
  * Debugger is active!
  * Debugger PIN: 285-622-087
 ```
-You can check that the server's demo API endpoint is available by visiting http://localhost:5000/testMessage in a browser, as shown in Figure 3.
+You can check that the server's demo endpoint is available by visiting http://localhost:5000/testMessage in a browser, as shown in Figure 3.
 
 <p align="center">
 <br/>
