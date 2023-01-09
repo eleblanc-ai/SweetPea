@@ -57,7 +57,7 @@ Next, update `mySquare()` to parse and use [parameters from an incoming query st
         except:
             return "Invalid argument, expected a numeric type."
 
-Here, we use Flask's [Request object](https://flask.palletsprojects.com/en/1.1.x/quickstart/#accessing-request-data) to access the arguments of an HTTP request and save them in a dictionary. Them, we try to cast the value of `x` to an integer and return its square. 
+Here, we use Flask's [Request object](https://flask.palletsprojects.com/en/1.1.x/quickstart/#accessing-request-data) to access the arguments of an HTTP request and save them in a dictionary. Then, we try to cast the value of `x` to an integer and return its square. 
 
 ### Responding with JSON objects
 The final step is to modify the `return` statements in `mySquare()` to respond with JSON objects. We use Flask's [jsonify method](https://flask.palletsprojects.com/en/2.2.x/api/#flask.json.jsonify), imported at the top of `Server.py`, to return JSON objects. In this case, the return objects will contain either the square of `x` or the error message. 
