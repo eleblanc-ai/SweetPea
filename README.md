@@ -244,7 +244,7 @@ SweetPea's core website comes with a small demo that lets you test for communica
 
 
 * Try a tutorial:
-  * [Adding an API endpoint to the core server](docs/back-end-functionality.md)
+  * [Adding an API endpoint to the core server](docs/add-endpoint.md)
 
 
 * Check out some external resources:
