@@ -36,3 +36,7 @@ This page contains all release notes for SweetPea.
             * Functional server for API and backend functionality
             * Demo endpoint
 ---
+<p align="center">
+  <img style="width:100%" src="../resources/fig/sweetpea-banner.png" alt="An impressionist-style painting of a field of SweetPeas. Original image created with OpenAI's DALL·E 2."/>
+
+</p>

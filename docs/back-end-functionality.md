@@ -88,16 +88,34 @@ Congratulations, you can now add functionality to the core server! In practice, 
 
 ---
 ## What's next?
-* Write a new function, such as one that:
-  * queries a database
-  * serves a file
-  * returns the result of another computation
-  
-
-* Stay tuned for a tutorial on accessing your core server functionality from the core website.
+* Try adding new functionality, for instance:
+  * Query a SQL database
+  * Serve a file
+  * Return the result of a different computation
 
 
+* If you want to start digging around the code, check out these starting points for the website and server:
 
+  * Website:
+    * [`core-website/src/App.js`](core-website/src/App.js)
+  * Server:
+    * [`core-server/Server.py`](core-server/Server.py)
+
+
+* Check out some external resources:
+  * [Learn how to build a user interface with React](https://reactjs.org/tutorial/tutorial.html).
+  * [Learn how to develop a Flask server](https://flask.palletsprojects.com/en/2.2.x/quickstart/#a-minimal-application).
+
+
+* Stay tuned for more documentation, tutorials, and new features.
+
+
+
+---
+<p align="center">
+  <img style="width:100%" src="../resources/fig/sweetpea-banner.png" alt="An impressionist-style painting of a field of SweetPeas. Original image created with OpenAI's DALL·E 2."/>
+
+</p>
 
 
 

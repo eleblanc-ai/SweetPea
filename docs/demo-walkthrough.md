@@ -49,3 +49,31 @@ def testMessage():
 ```
 
 Back on the website side, `fetchTestMessage()` receives the server's response and updates the `testMessage` state variable. The new value appears under the button, as shown earlier in Figure 4.
+
+---
+## What's next?
+* If you want to start digging around the code, check out these starting points for the website and server:
+
+    * Website:
+        * [`core-website/src/App.js`](core-website/src/App.js)
+    * Server:
+        * [`core-server/Server.py`](core-server/Server.py)
+
+
+* Try a tutorial:
+    * [Adding functionality to the core server
+      ](docs/back-end-functionality.md)
+
+
+* Check out some external resources:
+    * [Learn how to build a user interface with React](https://reactjs.org/tutorial/tutorial.html).
+    * [Learn how to develop a Flask server](https://flask.palletsprojects.com/en/2.2.x/quickstart/#a-minimal-application).
+
+    
+* Stay tuned for more documentation, tutorials, and new features.
+
+---
+<p align="center">
+  <img style="width:100%" src="../resources/fig/sweetpea-banner.png" alt="An impressionist-style painting of a field of SweetPeas. Original image created with OpenAI's DALL·E 2."/>
+
+</p>
