@@ -76,7 +76,7 @@ The final step is to modify the `return` statements in `mySquare()` to respond w
 
 ## Test the URL in the browser
 
-You can test that the `/mySquare` path is working using a test value `x=2` by visiting http://localhost:5000/mySquare?x=2 in the browser (see Figure 2).
+With the core server running (e.g., `python3 Server.py`), you can test that the `/mySquare` path is working using a test value `x=2` by visiting http://localhost:5000/mySquare?x=2 in the browser (see Figure 2).
 
 <p align="center">
   <img src="fig/final-test.png" style="width: 70%" alt="A view of the mySquare endpoint  accessed with argument `x=2` in a browser window. A JSON object called "response" displays with the value 4."/>
