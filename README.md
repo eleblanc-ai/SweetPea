@@ -38,7 +38,7 @@ Figure 1 shows an overview of the SweetPea architecture.
 * **Features**:
     * Core website:
         * Ready-to-develop front end _(React 18.2.0)_
-            * Blank React web app _(bootstrapped with [Create React App](https://github.com/facebook/create-react-app))_
+            * Blank React web app
             * Demo UI element
     * Core server:
         * Ready-to-develop back end _(Flask 2.2.2)_
@@ -118,6 +118,8 @@ Once you've installed the requirements, you can launch SweetPea's core website.
 <a name="launch-core-website">
 
 ### 2. Launch the SweetPea core website
+The core website is an empty React application, bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 1. Install the core website's package modules from the `SweetPea/core-website` directory.
 
        npm install
