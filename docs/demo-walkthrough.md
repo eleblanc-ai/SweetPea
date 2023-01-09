@@ -34,7 +34,7 @@ const fetchTestMessage = () => {
 
 
 
-4. On the server side (i.e., in `SweetPea/core-server/Server.py`), the demo uses a [Flask endpoint](https://flask.palletsprojects.com/en/2.2.x/quickstart/) called `/testMessage` that handles test message requests. Here, the server returns the string `"Hello, SweetPea!`.
+4. On the server side (i.e., in `SweetPea/core-server/Server.py`), the server maps the `/testMessage` URL to a function called `testMessage()` that handles test message requests. The function returns a JSON object containing the string `"Hello, SweetPea!`.
 
 ```
 @app.route("/testMessage", methods = ['GET'])
