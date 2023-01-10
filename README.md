@@ -93,12 +93,15 @@ v18.9.0-->
 
 <!--$ npm view react version
 18.2.0-->
+
+
 3. [Python](https://www.python.org/) -- *a language for developing the website's back-end functionality.*
 
        brew install python3
 
 <!-- $ python3 --version
 Python 3.10.6 -->
+
 4. [Flask](https://flask.palletsprojects.com/en/2.2.x/) -- *a web app framework for mapping HTTP requests from the website to Python functions.*
 
        pip3 install Flask
@@ -248,6 +251,7 @@ SweetPea's core website comes with a small demo that lets you test for communica
 
 
 * Check out some external resources:
+  * [](https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flask#api-terminology)
   * [Learn how to build a user interface with React](https://reactjs.org/tutorial/tutorial.html).
   * [Learn how to develop a Flask server](https://flask.palletsprojects.com/en/2.2.x/quickstart/#a-minimal-application).
 
