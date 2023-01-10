@@ -111,7 +111,7 @@ Python 3.10.6 -->
 
        pip3 install flask-cors
 
-> ✏️ In place of steps 4 and 5, you can run `pip3 install -r requirements.txt`
+> 💡️ In place of steps 4 and 5, you can run `pip3 install -r requirements.txt`
 > in the `core-server` directory to install Flask and Flask-cors.
 
 <!-- $ flask --version
