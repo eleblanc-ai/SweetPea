@@ -106,9 +106,13 @@ Python 3.10.6 -->
 
        pip3 install Flask
 
+
 5. [Flask-cors](https://flask.palletsprojects.com/en/2.2.x/) -- *a Flask extension for handling Cross Origin Resource Sharing (CORS)*
 
        pip3 install flask-cors
+
+> ✏️ In place of steps 4 and 5, you can run `pip3 install -r requirements.txt`
+> in the `core-server` directory to install Flask and Flask-cors.
 
 <!-- $ flask --version
 
