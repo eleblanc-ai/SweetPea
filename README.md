@@ -123,7 +123,7 @@ Once you've installed the requirements, you can launch SweetPea's core website.
 ### 2. Launch the SweetPea core website
 The core website is an empty React application, bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-1. Install the core website's package modules from the `SweetPea/core-website` directory.
+Install the core website's package modules from the `SweetPea/core-website` directory.
 
        npm install
 
@@ -132,7 +132,7 @@ The core website is an empty React application, bootstrapped with [Create React 
 
 <!-- If you choose instead to dig into any warnings that come up, then I recommend first checking out NPM's documentation on [auditing packages for security vulnerabilities](https://docs.npmjs.com/auditing-package-dependencies-for-security-vulnerabilities).--> 
 
-2. Build and start the core website.
+Next, build and start the core website.
 
         npm run build
         npm start
