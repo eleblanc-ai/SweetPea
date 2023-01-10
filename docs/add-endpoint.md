@@ -43,7 +43,7 @@ Note also that `x` has been removed from the signature of `mySquare()`. In the n
 
 ## Handling HTTP requests
 ### Parsing query parameters as arguments
-Next, update `mySquare()` to parse and use [parameters from an incoming query string](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#parameters), rather than from the signature of the function. 
+Update `mySquare()` to parse and use [parameters from an incoming query string](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#parameters), rather than from the signature of the function. 
 
     @app.route("/mySquare", methods = ['GET'])
     def mySquare():
