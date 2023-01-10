@@ -102,6 +102,8 @@ v18.9.0-->
 <!-- $ python3 --version
 Python 3.10.6 -->
 
+> 💡️ Optionally, use [pyenv](https://github.com/pyenv/pyenv) for version management. 
+
 4. [Flask](https://flask.palletsprojects.com/en/2.2.x/) -- *a web app framework for mapping HTTP requests from the website to Python functions.*
 
        pip3 install Flask
