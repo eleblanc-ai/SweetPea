@@ -169,7 +169,7 @@ Once the core website is up and running, you can start the SweetPea core server.
 ### 3. Start the SweetPea core server
 The server is a [basic Flask app](https://flask.palletsprojects.com/en/1.1.x/quickstart/#a-minimal-application) that includes one test endpoint called `testMessage`.
 
-1. Start the core server from the `SweetPea/core-server` directory in a new terminal tab or window.
+Start the core server from the `SweetPea/core-server` directory in a new terminal tab or window.
 
        python3 Server.py
 
@@ -227,7 +227,7 @@ You can set [additional arguments](https://flask.palletsprojects.com/en/2.2.x/ap
 Now that the website and server are both online, you can verify that the two can talk to each other.
 SweetPea's core website comes with a small demo that lets you test for communication between the website and server.
 
-1. In the SweetPea core website, press the button to make a request to the server for a test message. If the request is successful, the response appears below the button, as shown in Figure 4.
+In the SweetPea core website, press the button to make a request to the server for a test message. If the request is successful, the response appears below the button, as shown in Figure 4.
 
 <p align="center">
   <img src="resources/fig/readme-figs/test-connection.gif" style="border: 2px solid #555" alt="A screen capture of a mouse clicking the `Press for test message button` in the SweetPea core website." The response appears below the button, reading "Hello, SweetPea!"/>
