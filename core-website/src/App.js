@@ -29,7 +29,7 @@ function App() {
   return (
     <div className="App">
 
-      {/* Demo header, replace with your own -- edit style in App.css */}
+      {/* Demo header, replace with your own -- edit style in App.css  */}
       <div className="App-header">
         <p>
           SweetPea: A tiny web development kit.
