@@ -6,25 +6,33 @@ Date: 1/10/23
 
 # Glossary
 ## A
-* **Application Programming Interface (API)** -- Software that handles requests from a client to the server.
+* **Application Programming Interface (API)** -- A program that handles data transfer between the core website and core server via HTTP.
+  
+
+* **API Endpoint** -- A URL mapped to a resource on the core server.
+
 
 ## C
 * **Core Website** -- Your user interface
+
+
 * **Core Server** -- Your API + resources
 
 
-## E
-* **Endpoint** -- A URL mapped to an API resource.
-
-
 ## H
-* **HyperText Transfer Protocol (HTTP)** -- The means of communication between a client and server.
+* **HyperText Transfer Protocol (HTTP)** -- Client-server protocol for fetching resources on the Web, consisting of HTTP requests and responses.
+
+
+* **HTTP request** -- A message sent by a client to a server requesting a resource. The request contains a URL specifying the API endpoint of the resource and any arguments.
+
+
+* **HTTP response** -- A message from server to client in response to an HTTP request.
+
 
 ## R
-* **Request** -- Query from client to server to perform some action.
-* **Request URL** --
-* **Resource** -- A piece of software that the server makes available via HTTP.
-* **Response** -- Response from server to client.
+
+* **Resource** -- Data or computation made available via the API.
 
 # U
-* **User Interface** --
+* **User interface** -- The means by which a human user interacts with the software.
+
