@@ -21,7 +21,9 @@ Date: 1/10/23
 * **HyperText Transfer Protocol (HTTP)** -- The means of communication between a client and server.
 
 ## R
-
 * **Request** -- Query from client to server to perform some action.
 * **Resource** -- A piece of software that the server makes available via HTTP.
 * **Response** -- Response from server to client.
+
+# U
+* **User Interface** --
