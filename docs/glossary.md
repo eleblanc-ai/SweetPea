@@ -22,6 +22,7 @@ Date: 1/10/23
 
 ## R
 * **Request** -- Query from client to server to perform some action.
+* **Request URL** --
 * **Resource** -- A piece of software that the server makes available via HTTP.
 * **Response** -- Response from server to client.
 

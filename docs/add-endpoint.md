@@ -5,7 +5,7 @@ Date: 1/10/23
 -->
 # Creating an API endpoint
 
-The core server provides HTTP access to your behind-the-scenes functionality (e.g., database access, computations, user management). It serves your Application Programming Interface (API) and runs your supporting code according to HTTP requests from the core website.
+The core server provides HTTP access to your behind-the-scenes functionality (e.g., database access, computations, user management). It serves your Application Programming Interface (API) and runs your supporting code in response to requests from the core website.
 
 An API endpoint is a [URL path](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#path_to_resource) mapped to a function in the core server. This tutorial walks through adding a new endpoint (w/ supporting code) to the core server, covering three high-level steps:
 1. [Writing a function](#Writing-a-function) 
@@ -47,8 +47,10 @@ Now, if `Server.py` is running on http://localhost:5000, then you should be able
 Note also that `x` has been removed from the signature of `mySquare()`. In the next step, we'll add logic to `mySquare` to get the value of `x` from an incoming HTTP request.
 
 ## Handling HTTP requests
-### Parsing query parameters as arguments
-Update `mySquare()` to parse and use [parameters from an incoming query string](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#parameters), rather than from the signature of the function. 
+### Request arguments
+<!--(i.e., [parameters](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#parameters))-->
+
+Modify the original `mySquare()` function to grab arguments from the request URL, rather than from the signature of the function. 
 
     @app.route("/mySquare", methods = ['GET'])
     def mySquare():
