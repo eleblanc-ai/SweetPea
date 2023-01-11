@@ -31,11 +31,13 @@ Date: 1/10/23
 
 
 ## R
-
 * **Resource** -- Data or computation made available via the API.
 
 ## U
-* **User interface** -- The means by which a human user interacts with the software.
+* **User interface** -- The means by which a human user interacts with the web application.
+
+## W
+* **Web application** -- Application software that runs on a web server and is accessed via a web browser with an active internet connection.
 
 ---
 <p align="center">
