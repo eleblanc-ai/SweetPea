@@ -257,9 +257,10 @@ In the SweetPea core website, press the button to make a request to the server f
 
 
 * Check out some external resources:
-  * [](https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flask#api-terminology)
+
   * [Learn how to build a user interface with React](https://reactjs.org/tutorial/tutorial.html).
   * [Learn how to develop a Flask server](https://flask.palletsprojects.com/en/2.2.x/quickstart/#a-minimal-application).
+  * [Creating APIs with Python and Flask](https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flask)
 
 
 * Stay tuned for more documentation, tutorials, and new features.
