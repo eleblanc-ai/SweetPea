@@ -33,6 +33,6 @@ Date: 1/10/23
 
 * **Resource** -- Data or computation made available via the API.
 
-# U
+## U
 * **User interface** -- The means by which a human user interacts with the software.
 
