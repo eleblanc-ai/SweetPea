@@ -68,6 +68,7 @@ Back on the website side, `fetchTestMessage()` receives the server's response an
 * Try a tutorial:
     * [Creating an API endpoint](add-endpoint.md)
 
+* Check out the [glossary](docs/glossary.md).
 
 * Check out some external resources:
     * [Learn how to build a user interface with React](https://reactjs.org/tutorial/tutorial.html).
