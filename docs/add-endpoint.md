@@ -79,7 +79,7 @@ The final step is to modify the `return` statements in `mySquare()` to respond w
         except:
             return jsonify({"response":"Invalid argument, expected a numeric type."})
 
-## Test the URL in the browser
+## Test the endpoint in the browser
 
 With the core server running (e.g., `python3 Server.py`), you can test that the `/mySquare` endpoint is working using a test value `x=2` by visiting http://localhost:5000/mySquare?x=2 in the browser (see Figure 2).
 
