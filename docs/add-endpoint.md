@@ -1,4 +1,9 @@
-# Adding an API endpoint to the core server
+<!--
+SweetPea: Creating an API endpoint 
+Author: Emily LeBlanc
+Date: 1/10/23
+-->
+# Creating an API endpoint
 
 The core server provides HTTP access to your behind-the-scenes functionality (e.g., database access, computations, user management). It serves your Application Programming Interface (API) and runs your supporting code according to HTTP requests from the core website.
 

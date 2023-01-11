@@ -1,3 +1,8 @@
+<!--
+SweetPea: Demo walkthrough
+Author: Emily LeBlanc
+Date: 1/10/23
+-->
 # Demo walkthrough
 
 <p align="center">
@@ -61,8 +66,7 @@ Back on the website side, `fetchTestMessage()` receives the server's response an
 
 
 * Try a tutorial:
-    * [Adding an API endpoint to the core server
-      ](add-endpoint.md)
+    * [Creating an API endpoint](add-endpoint.md)
 
 
 * Check out some external resources:

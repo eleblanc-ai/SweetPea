@@ -253,7 +253,7 @@ In the SweetPea core website, press the button to make a request to the server f
 
 
 * Try a tutorial:
-  * [Adding an API endpoint to the core server](docs/add-endpoint.md)
+  * [Creating an API endpoint](docs/add-endpoint.md)
 
 
 * Check out some external resources:
