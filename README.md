@@ -259,7 +259,7 @@ In the SweetPea core website, press the button to make a request to the server f
 * Check out the [glossary](docs/glossary.md).
 
 
-* Check out some external resources:
+* Check out some external resources: 
 
   * [Learn how to build a user interface with React](https://reactjs.org/tutorial/tutorial.html).
   * [Learn how to develop a Flask server](https://flask.palletsprojects.com/en/2.2.x/quickstart/#a-minimal-application).
