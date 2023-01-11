@@ -11,10 +11,11 @@ import './App.css';
 import {SERVER_HOSTNAME, SERVER_PORT} from "./consts";
 
 function App() {
+
+    /* testMessage state variable initialized to empty string*/
     const [testMessageString, setTestMessageString] = useState('');
 
     /* Keep it RESTful with HTTP verbs: https://www.geeksforgeeks.org/get-and-post-method-using-fetch-api/ */
-
     /* Make GET request to the SweetPea core server's `testMessage` endpoint */
     const fetchTestMessage = () => {
         let url = "http://"+ SERVER_HOSTNAME + ":" + SERVER_PORT + "/testMessage"
