@@ -107,7 +107,9 @@ Congratulations, you can now add functionality to the core server! In practice, 
   * Server:
     * [`core-server/Server.py`](core-server/Server.py)
 
+
 * Check out the [glossary](docs/glossary.md).
+
 
 * Check out some external resources:
   * [Learn how to build a user interface with React](https://reactjs.org/tutorial/tutorial.html).
