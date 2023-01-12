@@ -168,7 +168,7 @@ webpack compiled successfully
 ```
 NPM should automatically open the website, shown in Figure 1 below. Otherwise, you can navigate to http://localhost:3000 to visit the website in your browser, as shown in Figure 2.
 <p align="center">
-  <img src="docs/fig/readme/website-test.png" alt="A screen capture of the launched website with the title `SweetPea: A tiny web development kit` and a button labeled "Press for test message."/>
+  <img src="docs/fig/readme/test-website.png" alt="A screen capture of the launched website with the title `SweetPea: A tiny web development kit` and a button labeled "Press for test message."/>
 </p>
 <p align="center">Figure 1. Launching the website.</p>
 
@@ -181,7 +181,7 @@ Once the website is up and running, you can start the SweetPea server.
 <a name="start-server">
 
 ### 3. Start the server
-The server is a [basic Flask app](https://flask.palletsprojects.com/en/1.1.x/quickstart/#a-minimal-application) that includes one test endpoint called `testMessage`.
+The server is a [basic Flask app](https://flask.palletsprojects.com/en/1.1.x/quickstart/#a-minimal-application) that includes one demo endpoint called `time`. This endpoint returns the server's system time.
 
 Start the server from the `SweetPea/server` directory in a new terminal tab or window.
 
@@ -198,11 +198,11 @@ Press CTRL+C to quit
  * Debugger is active!
  * Debugger PIN: 285-622-087
 ```
-You can check that the server's demo endpoint is available by visiting http://localhost:5000/testMessage in a browser, as shown in Figure 3.
+You can check that the server's demo endpoint is available by visiting http://localhost:5000/time in a browser, as shown in Figure 3.
 
 <p align="center">
 <br/>
-  <img src="docs/fig/readme/server-test-small.png" alt="A screen capture of the launched website with the title `SweetPea: A tiny web app template` and a button labeled "Click for test message."/>
+  <img src="docs/fig/readme/test-server.png" alt="A screen capture of the launched website with the title `SweetPea: A tiny web app template` and a button labeled "Click for test message."/>
 </p>
 <p align="center">Figure 2. Testing the server's demo endpoint.</p>
 
@@ -244,7 +244,7 @@ The website comes with a small demo that lets you test for communication between
 In the website, press the button to make a request to the server for a test message. If the request is successful, the response appears below the button, as shown in Figure 4.
 
 <p align="center">
-  <img src="docs/fig/readme/test-connection.gif" style="border: 2px solid #555" alt="A screen capture of a mouse clicking the `Press for test message button` in the website." The response appears below the button, reading "Hello, SweetPea!"/>
+  <img src="docs/fig/readme/test-connection-v2.png" style="border: 2px solid #555" alt="A screen capture of a mouse clicking the `Press for test message button` in the website." The response appears below the button, reading "Hello, SweetPea!"/>
 </p>
 <p align="center">Figure 3. Testing for communication between the website and server.</p>
 

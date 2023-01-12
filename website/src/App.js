@@ -47,7 +47,7 @@ function App() {
                 {/* Demo button -- edit style in App.css */}
                 {/* On click, demo button will call fetchTestMessage */}
                 <Stack className="App-main-stack" spacing={2} direction="row">
-                    <Button variant="contained" onClick={fetchTimeString}>Get Time</Button>
+                    <Button variant="contained" onClick={fetchTimeString}>Time</Button>
                     <Alert className="alert-response" severity="success">{timeString}</Alert>
                 </Stack>
 
