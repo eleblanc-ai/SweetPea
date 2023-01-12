@@ -244,7 +244,7 @@ The website comes with a small demo that lets you test for communication between
 In the website, press the button to make a request to the server for a test message. If the request is successful, the response appears below the button, as shown in Figure 4.
 
 <p align="center">
-  <img src="docs/fig/readme/test-connection-v2.png" style="border: 2px solid #555" alt="A screen capture of a mouse clicking the `Press for test message button` in the website." The response appears below the button, reading "Hello, SweetPea!"/>
+  <img src="docs/fig/readme/test-connection.png" style="border: 2px solid #555" alt="A screen capture of a mouse clicking the `Press for test message button` in the website." The response appears below the button, reading "Hello, SweetPea!"/>
 </p>
 <p align="center">Figure 3. Testing for communication between the website and server.</p>
 
