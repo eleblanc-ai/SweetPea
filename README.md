@@ -62,8 +62,8 @@ All you need to do is:
 
 * [Get started with SweetPea](#Get-started-with-SweetPea)
     * [Install the requirements](#install-requirements)
-    * [Launch the website](#launch-website)
     * [Start the server](#start-server)
+    * [Launch the website](#launch-website)
     * [Test website and server communication](#communication)
 * [Next steps for you](#Next-steps-for-you)
 * [License](#License)
@@ -132,55 +132,12 @@ Werkzeug 2.2.2 -->
 
 Once you've installed the requirements, you can launch the website.
 
-<a name="launch-website">
 
-### 2. Launch the website
-The  website is an empty React application, bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-Install the website's package modules from the `SweetPea/website` directory.
-
-       npm install
-
-> ⚠️ At this step, `npm audit` (which is run automatically as part of `npm install`) is [likely to report security vulnerabilities in dependency packages](https://overreacted.io/npm-audit-broken-by-design/). You can choose to [ignore the audit report](https://www.voitanos.io/blog/don-t-be-alarmed-by-vulnerabilities-after-running-npm-install/#how-should-you-handle-these-audit-reports). Otherwise, check out NPM's documentation on [auditing dependency packages for security vulnerabilities](https://docs.npmjs.com/auditing-package-dependencies-for-security-vulnerabilities).
-
-
-<!-- If you choose instead to dig into any warnings that come up, then I recommend first checking out NPM's documentation on [auditing packages for security vulnerabilities](https://docs.npmjs.com/auditing-package-dependencies-for-security-vulnerabilities).--> 
-
-Next, build and start the website.
-
-        npm run build
-        npm start
-
-The output of `npm start` should look similar to this:
-```
-Compiled successfully!
-
-You can now view frontend in the browser.
-
-  Local:            http://localhost:3000
-  On Your Network:  http://xxx.xxx.xxx.xxx:3000
-
-Note that the development build is not optimized.
-To create a production build, use npm run build.
-
-webpack compiled successfully
-
-```
-NPM should automatically open the website, shown in Figure 1 below. Otherwise, you can navigate to http://localhost:3000 to visit the website in your browser, as shown in Figure 2.
-<p align="center">
-  <img src="docs/fig/readme/test-website.png" alt="A screen capture of the launched website with the title `SweetPea: A tiny web development kit` and a button labeled "Press for test message."/>
-</p>
-<p align="center">Figure 1. Launching the website.</p>
-
-You can optionally [change the hostname and port for the website](https://dev.to/kevinmel2000/nodejs-reactjs-change-host-and-port-number-70b).
-
-
-
-Once the website is up and running, you can start the SweetPea server.
 
 <a name="start-server">
 
-### 3. Start the server
+### 2. Start the server
+
 The server is a [basic Flask app](https://flask.palletsprojects.com/en/1.1.x/quickstart/#a-minimal-application) that includes one demo endpoint called `time`. This endpoint returns the server's system time.
 
 Start the server from the `SweetPea/server` directory in a new terminal tab or window.
@@ -233,6 +190,49 @@ https://create-react-app.dev/docs/proxying-api-requests-in-development/
 You will also need to update the value of `proxy` in `website/package-json` to reflect the new port and hostname. --> 
 
 You can set [additional arguments](https://flask.palletsprojects.com/en/2.2.x/api/#flask.Flask.run) for your Flask app by editing the `app.run` call in `Server.py`.
+
+<a name="launch-website">
+
+### 3. Launch the website
+
+The website is an empty React application, bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Install the website's package modules from the `SweetPea/website` directory.
+
+       npm install
+
+> ⚠️ At this step, `npm audit` (which is run automatically as part of `npm install`) is [likely to report security vulnerabilities in dependency packages](https://overreacted.io/npm-audit-broken-by-design/). You can choose to [ignore the audit report](https://www.voitanos.io/blog/don-t-be-alarmed-by-vulnerabilities-after-running-npm-install/#how-should-you-handle-these-audit-reports). Otherwise, check out NPM's documentation on [auditing dependency packages for security vulnerabilities](https://docs.npmjs.com/auditing-package-dependencies-for-security-vulnerabilities).
+
+
+<!-- If you choose instead to dig into any warnings that come up, then I recommend first checking out NPM's documentation on [auditing packages for security vulnerabilities](https://docs.npmjs.com/auditing-package-dependencies-for-security-vulnerabilities).--> 
+
+Next, build and start the website.
+
+        npm run build
+        npm start
+
+The output of `npm start` should look similar to this:
+```
+Compiled successfully!
+
+You can now view frontend in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://xxx.xxx.xxx.xxx:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+
+```
+NPM should automatically open the website, shown in Figure 1 below. Otherwise, you can navigate to http://localhost:3000 to visit the website in your browser, as shown in Figure 2.
+<p align="center">
+  <img src="docs/fig/readme/test-website.png" alt="A screen capture of the launched website with the title `SweetPea: A tiny web development kit` and a button labeled "Press for test message."/>
+</p>
+<p align="center">Figure 1. Launching the website.</p>
+
+You can optionally [change the hostname and port for the website](https://dev.to/kevinmel2000/nodejs-reactjs-change-host-and-port-number-70b).
 
 <a name="communication">
 
