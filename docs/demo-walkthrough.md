@@ -81,6 +81,6 @@ Back on the website side, `fetchTestMessage()` receives the server's response an
 
 ---
 <p align="center">
-  <img style="width:100%" src="../resources/fig/sweetpea-banner.png" alt="An impressionist-style painting of a field of SweetPeas. Original image created with OpenAI's DALL·E 2."/>
+  <img style="width:100%" src="../docs/fig/sweetpea-banner.png" alt="An impressionist-style painting of a field of SweetPeas. Original image created with OpenAI's DALL·E 2."/>
 
 </p>
