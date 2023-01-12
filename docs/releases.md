@@ -8,6 +8,27 @@ This page contains all release notes for SweetPea.
 <!-- https://simonwillison.net/2022/Jan/31/release-notes/ -->
 <!-- https://www.productplan.com/learn/release-notes-best-practices/ -->
 
+# SweetPea 2.0.0
+* **Date**: Jan 12, 2023
+* **Changes**:
+    * Created new Glossary
+    * Refactored "Core Website" and "Core Server" to "Website" and "Server"
+      * Incompatible with previous v1.0.1
+    * Updated documentation in compliance with new Glossary
+    * Moved `resources` directory to `server` directory.
+    * Moved documentation figures from `resources` to `docs` directory.
+  
+* **Features**:
+    * Website:
+        * Ready-to-develop front end _(React 18.2.0)_
+            * React/JS web app for user interface
+            * Demo UI element
+    * Server:
+        * Ready-to-develop back end _(Flask 2.2.2)_
+            * Demo server for API and software resources
+            * Demo API and resource
+---
+
 # SweetPea v1.0.1
 * **Date**: Jan 6, 2023
 * **Features**:

@@ -4,13 +4,16 @@ import argparse
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
+from datetime import datetime
+
 app = Flask(__name__)
 CORS(app)
 
 # Return a test message to the client
-@app.route("/testMessage", methods = ['GET'])
-def testMessage():
-  return jsonify({'testMessage': "Hello, SweetPea!"})
+@app.route("/time", methods = ['GET'])
+def time():
+    print(str(datetime.now().strftime("%H:%M:%S")))
+    return jsonify({'time': "The time is: " + str(datetime.now().strftime("%H:%M:%S"))})
 
 # Return parsed command line arguments and/or those set to default values.
 def parseArgs(argv=None):

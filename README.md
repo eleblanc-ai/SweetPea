@@ -1,28 +1,26 @@
 # Create web applications with SweetPea
-SweetPea is a tiny web development kit. It provides a basic client-server framework that any developer can use to create dynamic web applications. SweetPea is intended for prototyping, learning, and having fun with web applications. It includes:
-
-* A core website for your user interface
-* A core server for your back-end functionality
+SweetPea is a tiny web development kit. It provides a client-server framework that any developer can use to build a dynamic web application. SweetPea is intended for prototyping, learning, and having fun with web applications. 
 
 
+It includes:
+
+* A website for your user interface(s)
+* An server for your back-end functionality
 
 All you need to do is:
-1. Build your user interface on top of the core website.
+1. Build a user interface for the website.
     * [ReactJS](https://reactjs.org), [HTML](https://www.w3schools.com/html/), and [CSS](https://www.w3schools.com/css/)
 
 
-2. Program your API and back-end functionality on top of the core server.
+2. Develop software resources and create an Application Programming Interface (API) for the server.
     * [Flask](https://flask.palletsprojects.com/en/2.2.x/) and [Python](https://www.python.org/)
+  
+    
+3. Call your API from the user interface to make your resources available to the website.
+    * [HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
 
 
-Figure 1 shows an overview of the SweetPea architecture.
-
-<p align="center">
-  <img src="resources/fig/readme-figs/sweetpea-architecture.png" style="width: 85%; border: 2px solid #555" alt="A figure showing the SweetPea architecture, with the core website (or Client, implemented using REACTJS, HTML, and CSS)" making HTTP requests to and receiving responses from the API server (implemented using Flask and Python).>
-</p>
-<p align="center">Figure 1. SweetPea architecture overview.</p>
-
- SweetPea is yet to become a website builder, hosting service, or production environment.
+<!--SweetPea is yet to become a website builder, hosting service, or production environment.-->
 
 ## Release Notes
 <!-- Semantic versioning: https://semver.org/-->
@@ -33,19 +31,30 @@ Figure 1 shows an overview of the SweetPea architecture.
 <!-- https://simonwillison.net/2022/Jan/31/release-notes/ -->
 <!-- https://www.productplan.com/learn/release-notes-best-practices/ -->
 
-* **Version**: 1.0.1
-* **Date**: Jan 6, 2023
+* **Version**: 2.0.0
+
+
+* **Date**: Jan 12, 2023
+
+
+* **Changes**:
+    * Created new Glossary
+    * Refactored "Core Website" and "Core Server" to "Website" and "Server"
+        * Incompatible with previous v1.0.1
+    * Updated documentation in compliance with new Glossary
+    * Moved `resources` directory to `server` directory.
+    * Moved documentation figures from `resources` to `docs` directory.
+
+
 * **Features**:
-    * Core website:
+    * Website:
         * Ready-to-develop front end _(React 18.2.0)_
-            * Blank React web app
+            * React/JS web app for user interface
             * Demo UI element
-    * Core server:
+    * Server:
         * Ready-to-develop back end _(Flask 2.2.2)_
-            * Functional server for API and backend functionality
-            * Demo endpoint and function
-* **Bug fix**:
-    * `core-website/package.json`: changed `npm start` port from (incorrect) 4242 back to default 3000.
+            * Demo server for API and software resources
+            * Demo API and resource
 
 [See all release notes.](docs/releases.md)
 
@@ -53,12 +62,11 @@ Figure 1 shows an overview of the SweetPea architecture.
 
 * [Get started with SweetPea](#Get-started-with-SweetPea)
     * [Install the requirements](#install-requirements)
-    * [Launch the SweetPea core website](#launch-core-website)
-    * [Start the SweetPea core server](#start-core-server)
+    * [Launch the website](#launch-website)
+    * [Start the server](#start-server)
     * [Test website and server communication](#communication)
 * [Next steps for you](#Next-steps-for-you)
 * [License](#License)
-<!-- * [Development resources](#Development-resources)-->
 
 ## Get started with SweetPea
 > ⚠️ These instructions were tested on a laptop running macOS Monterey 12.6 with an M1 chip.
@@ -114,7 +122,7 @@ Python 3.10.6 -->
        pip3 install flask-cors
 
 > 💡️ In place of steps 4 and 5, you can run `pip3 install -r requirements.txt`
-> in the `core-server` directory to install Flask and Flask-cors.
+> in the `server` directory to install Flask and Flask-cors.
 
 <!-- $ flask --version
 
@@ -122,14 +130,14 @@ Python 3.10.6
 Flask 2.2.2
 Werkzeug 2.2.2 -->
 
-Once you've installed the requirements, you can launch SweetPea's core website.
+Once you've installed the requirements, you can launch the website.
 
-<a name="launch-core-website">
+<a name="launch-website">
 
-### 2. Launch the SweetPea core website
-The core website is an empty React application, bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 2. Launch the website
+The  website is an empty React application, bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Install the core website's package modules from the `SweetPea/core-website` directory.
+Install the website's package modules from the `SweetPea/website` directory.
 
        npm install
 
@@ -138,7 +146,7 @@ Install the core website's package modules from the `SweetPea/core-website` dire
 
 <!-- If you choose instead to dig into any warnings that come up, then I recommend first checking out NPM's documentation on [auditing packages for security vulnerabilities](https://docs.npmjs.com/auditing-package-dependencies-for-security-vulnerabilities).--> 
 
-Next, build and start the core website.
+Next, build and start the website.
 
         npm run build
         npm start
@@ -158,24 +166,24 @@ To create a production build, use npm run build.
 webpack compiled successfully
 
 ```
-NPM should automatically open SweetPea's core website, shown in Figure 1 below. Otherwise, you can navigate to http://localhost:3000 to visit the website in your browser, as shown in Figure 2.
+NPM should automatically open the website, shown in Figure 1 below. Otherwise, you can navigate to http://localhost:3000 to visit the website in your browser, as shown in Figure 2.
 <p align="center">
-  <img src="resources/fig/readme-figs/core-website-test.png" alt="A screen capture of the launched website with the title `SweetPea: A tiny web development kit` and a button labeled "Press for test message."/>
+  <img src="docs/fig/readme/website-test.png" alt="A screen capture of the launched website with the title `SweetPea: A tiny web development kit` and a button labeled "Press for test message."/>
 </p>
-<p align="center">Figure 2. Launching the SweetPea core website.</p>
+<p align="center">Figure 1. Launching the website.</p>
 
-You can optionally [change the hostname and port for the core website](https://dev.to/kevinmel2000/nodejs-reactjs-change-host-and-port-number-70b).
+You can optionally [change the hostname and port for the website](https://dev.to/kevinmel2000/nodejs-reactjs-change-host-and-port-number-70b).
 
 
 
-Once the core website is up and running, you can start the SweetPea core server.
+Once the website is up and running, you can start the SweetPea server.
 
-<a name="start-core-server">
+<a name="start-server">
 
-### 3. Start the SweetPea core server
+### 3. Start the server
 The server is a [basic Flask app](https://flask.palletsprojects.com/en/1.1.x/quickstart/#a-minimal-application) that includes one test endpoint called `testMessage`.
 
-Start the core server from the `SweetPea/core-server` directory in a new terminal tab or window.
+Start the server from the `SweetPea/server` directory in a new terminal tab or window.
 
        python3 Server.py
 
@@ -194,9 +202,9 @@ You can check that the server's demo endpoint is available by visiting http://lo
 
 <p align="center">
 <br/>
-  <img src="resources/fig/readme-figs/core-server-test-small.png" alt="A screen capture of the launched website with the title `SweetPea: A tiny web app template` and a button labeled "Click for test message."/>
+  <img src="docs/fig/readme/server-test-small.png" alt="A screen capture of the launched website with the title `SweetPea: A tiny web app template` and a button labeled "Click for test message."/>
 </p>
-<p align="center">Figure 3. Testing the SweetPea core server's demo endpoint.</p>
+<p align="center">Figure 2. Testing the server's demo endpoint.</p>
 
 The server optionally accepts arguments for hostname, port, threaded mode, and debug mode as follows:
 ```
@@ -211,7 +219,7 @@ options:
   -d, --debug           enable debug mode
 ```
 
-> ⚠️ If you change the server's hostname or port, you will also need to tell the website how to reach the core server. To do so, update the following constants in `core-website/src/consts.js` to reflect your changes:
+> ⚠️ If you change the server's hostname or port, you will also need to tell the website how to reach the server. To do so, update the following constants in `website/src/consts.js` to reflect your changes:
 >* `SERVER_HOSTNAME`
 >* `SERVER_PORT`
 >
@@ -222,7 +230,7 @@ Later:
 
 https://create-react-app.dev/docs/proxying-api-requests-in-development/
 
-You will also need to update the value of `proxy` in `core-website/package-json` to reflect the new port and hostname. --> 
+You will also need to update the value of `proxy` in `website/package-json` to reflect the new port and hostname. --> 
 
 You can set [additional arguments](https://flask.palletsprojects.com/en/2.2.x/api/#flask.Flask.run) for your Flask app by editing the `app.run` call in `Server.py`.
 
@@ -231,14 +239,14 @@ You can set [additional arguments](https://flask.palletsprojects.com/en/2.2.x/ap
 ### 4. Test website and server communication
 
 Now that the website and server are both online, you can verify that the two can talk to each other.
-SweetPea's core website comes with a small demo that lets you test for communication between the website and server.
+The website comes with a small demo that lets you test for communication between the website and server.
 
-In the SweetPea core website, press the button to make a request to the server for a test message. If the request is successful, the response appears below the button, as shown in Figure 4.
+In the website, press the button to make a request to the server for a test message. If the request is successful, the response appears below the button, as shown in Figure 4.
 
 <p align="center">
-  <img src="resources/fig/readme-figs/test-connection.gif" style="border: 2px solid #555" alt="A screen capture of a mouse clicking the `Press for test message button` in the SweetPea core website." The response appears below the button, reading "Hello, SweetPea!"/>
+  <img src="docs/fig/readme/test-connection.gif" style="border: 2px solid #555" alt="A screen capture of a mouse clicking the `Press for test message button` in the website." The response appears below the button, reading "Hello, SweetPea!"/>
 </p>
-<p align="center">Figure 4. Testing for communication between the core website and server.</p>
+<p align="center">Figure 3. Testing for communication between the website and server.</p>
 
 
 # Next steps for you
@@ -247,9 +255,9 @@ In the SweetPea core website, press the button to make a request to the server f
 * If you want to start digging around the code, check out these starting points for the website and server:
 
     * Website:
-        * [`core-website/src/App.js`](core-website/src/App.js)
+        * [`website/src/App.js`](website/src/App.js)
     * Server:
-        * [`core-server/Server.py`](core-server/Server.py)
+        * [`server/Server.py`](server/Server.py)
 
 
 * Try a tutorial:
@@ -267,24 +275,6 @@ In the SweetPea core website, press the button to make a request to the server f
 
 
 * Stay tuned for more documentation, tutorials, and new features.
-
-<!-- * If you want to see more examples of how to work with SweetPea, check out the [Tutorials](#Tutorials) page.
-
-
-* If you want to learn more about what's going on under the hood, head over to [System documentation](TBD). -->
-
-
-
-<!--
-# Example walkthrough
-
-Otherwise, check out the [Example walkthrough](#Example-walkthrough) to learn how the core website and server communicated in this example.
-
-# Development resources
-## Tutorials
-## Examples
-## Documentation
-## External resources -->
 
 # License
 MIT License

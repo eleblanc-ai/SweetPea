@@ -59,7 +59,7 @@
   box-shadow: 0 1px #666;
   transform: translateY(1px);
 }
-.test-message-response {
+.time-response {
   font-size: calc(13px + 2vmin);
   color: black;
 }
@@ -70,6 +70,9 @@
   color: #61dafb;
 }
 
+.alert-response{
+  width: 80%;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

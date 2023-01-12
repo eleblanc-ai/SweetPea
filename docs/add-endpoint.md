@@ -5,9 +5,9 @@ Date: 1/10/23
 -->
 # Creating an API endpoint
 
-The core server provides HTTP access to your behind-the-scenes functionality (e.g., database access, computations, user management). It serves your Application Programming Interface (API) and runs your supporting code in response to requests from the core website.
+The server provides HTTP access to your back-end functionality (e.g., database access, computations, user management, other software resources). It serves your Application Programming Interface (API) and runs your supporting code in response to requests from the  website.
 
-An API endpoint maps a [URL path](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#path_to_resource) to a function in the core server. This tutorial walks through adding a new  endpoint (w/ supporting code) to the core server, covering three high-level steps:
+An API endpoint maps a [URL path](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#path_to_resource) to a function in the server. This tutorial walks through adding a new  endpoint (w/ supporting code) to the server, covering three high-level steps:
 1. [Write a function](#Write-a-function) 
 2. [Create the endpoint](#Create-the-endpoint)
 3. [Handle HTTP requests](#Handling-HTTP-requests)
@@ -16,7 +16,7 @@ This doc assumes some advance knowledge of [Python](https://www.python.org/), [H
 
 ## Write a function
 
-In `core-server/Server.py`, write a function called `mySquare()` that returns the square of `x` (if `x` is numeric). 
+In `server/Server.py`, write a function called `mySquare()` that returns the square of `x` (if `x` is numeric). 
 
     def mySquare(x):
 
@@ -26,7 +26,7 @@ In `core-server/Server.py`, write a function called `mySquare()` that returns th
             return "Invalid argument, expected a numeric type."
 
 
- ✏️ You can also choose to [import functions](https://docs.python.org/3/tutorial/modules.html) into the core server, rather than writing them directly into `Server.py`.
+ ✏️ You can also choose to [import functions](https://docs.python.org/3/tutorial/modules.html) into the server, rather than writing them directly into `Server.py`.
 
 
 ## Creating the endpoint
@@ -83,14 +83,14 @@ The final step is to modify the `return` statements in `mySquare()` to respond w
 
 ## Test the endpoint in the browser
 
-With the core server running (e.g., `python3 Server.py`), you can test that the `/mySquare` endpoint is working using a test value `x=2` by visiting http://localhost:5000/mySquare?x=2 in the browser (see Figure 2).
+With the server running (e.g., `python3 Server.py`), you can test that the `/mySquare` endpoint is working using a test value `x=2` by visiting http://localhost:5000/mySquare?x=2 in the browser (see Figure 2).
 
 <p align="center">
-  <img src="fig/final-test.png" style="width: 70%" alt="A view of the mySquare endpoint  accessed with argument `x=2` in a browser window. A JSON object called "response" displays with the value 4."/>
+  <img src="fig/add-endpoint/add-endpoint-test.png" style="width: 70%" alt="A view of the mySquare endpoint  accessed with argument `x=2` in a browser window. A JSON object called "response" displays with the value 4."/>
 </p>
 <p align="center">Figure 1. Testing the <tt>/mySquare</tt> endpoint with argument <tt>x=2</tt>.  </p>
 
-Congratulations, you can now add functionality to the core server! In practice, you can add whatever functions you want using any number of libraries, languages, APIs, and databases. Just make sure that the end result can be packaged as a JSON object and you're all set.
+Congratulations, you can now add functionality to the  server! In practice, you can add whatever functions you want using any number of libraries, languages, APIs, and databases. Just make sure that the end result can be packaged as a JSON object and you're all set.
 
 
 ## What's next?
@@ -103,9 +103,9 @@ Congratulations, you can now add functionality to the core server! In practice, 
 * If you want to start digging around the code, check out these starting points for the website and server:
 
   * Website:
-    * [`core-website/src/App.js`](core-website/src/App.js)
+    * [`website/src/App.js`](website/src/App.js)
   * Server:
-    * [`core-server/Server.py`](core-server/Server.py)
+    * [`server/Server.py`](server/Server.py)
 
 
 * Check out the [glossary](docs/glossary.md).
