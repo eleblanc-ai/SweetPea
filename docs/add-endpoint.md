@@ -42,7 +42,7 @@ To do so, we use a [route decorator](https://flask.palletsprojects.com/en/2.2.x/
         except:
             return "Invalid argument, expected a numeric type."
 
-Now, if `Server.py` is running on http://localhost:5000, then you should be able to test access this function by visiting http://localhost:5000/square. 
+Now, if `Server.py` is running on http://localhost:5000, then you should be able to test access this function by visiting http://localhost:5000/square. You should see the `Invalid argument` message displayed in the browser.
 
 Note also that `x` has been removed from the signature of `square()`. In the next step, we'll add logic to `square` to get the value of `x` from an incoming HTTP request.
 
