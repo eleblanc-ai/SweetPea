@@ -35,16 +35,18 @@ Now that we have a function, we need to make it accessible via HTTP.
 To do so, we use a [route decorator](https://flask.palletsprojects.com/en/2.2.x/api/#flask.Flask.route) to map a new endpoint called `/square` to the function `square()`. The `methods` argument tells Flask that only [`GET` requests](https://www.w3schools.com/tags/ref_httpmethods.asp) are allowed for this URL path.
 
     @app.route("/square", methods = ['GET'])
-    def mySquare():
+    def square():
 
         try:
             return x*x
         except:
             return "Invalid argument, expected a numeric type."
 
-Now, if `Server.py` is running on http://localhost:5000, then you should be able to test access this function by visiting http://localhost:5000/square. You should see the `Invalid argument` message displayed in the browser.
+Now, if `Server.py` is running on http://localhost:5000, then you should be able to test access this function by visiting http://localhost:5000/square. You should see the `Invalid argument` message displayed in the browser because:
+* We haven't added arguments to the URL 
+* The `square()` function doesn't have parameters yet
 
-Note also that `x` has been removed from the signature of `square()`. In the next step, we'll add logic to `square` to get the value of `x` from an incoming HTTP request.
+Note that `x` has been removed from the signature of `square()`. In the next step, we'll add logic to `square` to get the value of `x` from an incoming HTTP request.
 
 ## Handling HTTP requests
 ### Request arguments
@@ -53,7 +55,7 @@ Note also that `x` has been removed from the signature of `square()`. In the nex
 Modify the original `square()` function to grab arguments from the HTTP request, rather than from the signature of the function. 
 
     @app.route("/square", methods = ['GET'])
-    def mySquare():
+    def square():
 
         args = dict(request.args().items)
 
@@ -70,7 +72,7 @@ Here, we use Flask's [Request object](https://flask.palletsprojects.com/en/1.1.x
 The final step is to modify the `return` statements in `square()` to respond with JSON objects. We use Flask's [jsonify method](https://flask.palletsprojects.com/en/2.2.x/api/#flask.json.jsonify) (imported at the top of `Server.py`) to return JSON objects. In this case, the return objects will contain either the square of `x` or the error message. 
 
     @app.route("/square", methods = ['GET'])
-    def mySquare():
+    def square():
 
         args = dict(request.args.items())
 
