@@ -66,6 +66,9 @@
 .App-bottom-nav {
 
 }
+.App-main-stack{
+  padding:20px;
+}
 .App-link {
   color: #61dafb;
 }
