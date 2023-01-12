@@ -130,7 +130,7 @@ Python 3.10.6
 Flask 2.2.2
 Werkzeug 2.2.2 -->
 
-Once you've installed the requirements, you can launch the website.
+Once you've installed the requirements, you can start the server.
 
 
 
