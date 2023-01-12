@@ -5,56 +5,52 @@ Date: 1/10/23
 -->
 # Demo walkthrough
 
+A walkthrough of the demo web app demonstrated in `README.md`.
+
 <p align="center">
   <img src="fig/demo-walkthrough/test-connection.png" style="border: 2px solid #555; width:75%" alt="A screen capture of a mouse clicking the `Press for test message button` in the website." The response appears below the button, reading "Hello, SweetPea!"/>
 </p>
-<p align="center">Figure 1. SweetPea.</p> 
+<p align="center">Figure 1. Communication between the website and server.</p> 
 
 
 On the website side (i.e., in `SweetPea/website/src/App.js`), the demo uses the `onClick()` function of an HTML button to request a test message from the server.
 
 ```
-<button className="App-button"
-                   type="button"
-                   onClick={fetchTestMessage}>Press for test message</button>
+<Button variant="contained" onClick={fetchTimeString}>Time</Button>
+```
+<br/>
+
+Next, the `fetchTimeString()` function uses [JavaScript's fetch method](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) to make an HTTP request to the server for a test message at the `time` endpoint. Then, the function updates the value of the state variable `time` with the response string.
+
+```
+const fetchTimeString = () => {
+    let url = "http://"+ SERVER_HOSTNAME + ":" + SERVER_PORT + "/" + TIME_ENDPOINT
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            setTimeString("[Response] " + data.time)
+        })
 ```
 
-Next, the `fetchTestMessage()` function uses [JavaScript's fetch method](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) to make an HTTP request to the server for a test message at the `testMessage` endpoint. Then, the function updates the value of the state variable `testMessage` with the response string.
+Just to the right of the HTML button, the value of `timeString` is evaluated and displayed on the screen in an [`Alert` component](https://mui.com/material-ui/react-alert/).
 
-``` 
-const fetchTestMessage = () => {
-  let url = "http://localhost:5000/testMessage"
-  fetch(url)
-      .then(response => response.json())
-      .then(data => {
-          setTestMessageString(data.testMessage)
-      })
-}
-```
-
-Just below the HTML button, the value of `testMessage` is evaluated and displayed on the screen.
-
-```       
-<div className="test-message-response">
-   <p>{testMessageString}</p>
-</div>
-```
 
 <!-- [React Hooks](https://reactjs.org/docs/hooks-intro.html).*-->
 
 
 
 
-On the server side (i.e., in `SweetPea/server/Server.py`), the server maps the `/testMessage` URL to a function called `testMessage()` that handles test message requests. The function returns a JSON object containing the string `"Hello, SweetPea!`.
+On the server side (i.e., in `SweetPea/server/Server.py`), the server maps the `/time` URL to a function called `time()` that handles test message requests. The function returns a JSON object containing the string containing the current time.
 
 ```
-@app.route("/testMessage", methods = ['GET'])
-def testMessage():
-  return {'testMessage': "Hello, SweetPea!"}
+@app.route("/time", methods = ['GET'])
+def time():
+    return jsonify({'time': "The time is: " 
+                             + str(datetime.now().strftime("%H:%M:%S"))})
 
 ```
 
-Back on the website side, `fetchTestMessage()` receives the server's response and updates the `testMessage` state variable. The new value appears under the button, as shown earlier in Figure 4.
+Back on the website side, `fetchTimeString()` receives the server's response and updates the `timeString` state variable. The new value appears next to the button, as shown in Figure 1.
 
 ## What's next?
 * If you want to start digging around the code, check out these starting points for the website and server:

@@ -9,11 +9,23 @@ from datetime import datetime
 app = Flask(__name__)
 CORS(app)
 
-# Return a test message to the client
+@app.route("/mySquare", methods = ['GET'])
+def mySquare():
+
+    args = dict(request.args.items())
+
+    try:
+        x = int(args['x'])
+        return jsonify({"response":x*x})
+
+    except:
+        return jsonify({"response":"Invalid argument, expected a numeric type."})
+
+# Return a time string to the client
 @app.route("/time", methods = ['GET'])
 def time():
-    print(str(datetime.now().strftime("%H:%M:%S")))
-    return jsonify({'time': "The time is: " + str(datetime.now().strftime("%H:%M:%S"))})
+    return jsonify({'time': "The time is: "
+                            + str(datetime.now().strftime("%H:%M:%S"))})
 
 # Return parsed command line arguments and/or those set to default values.
 def parseArgs(argv=None):
