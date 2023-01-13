@@ -66,15 +66,16 @@
 .App-bottom-nav {
 
 }
-.App-main-stack{
+.App-endpoint-stack{
   padding:20px;
+  background-color:lightsteelblue;
 }
 .App-link {
   color: #61dafb;
 }
 
 .alert-response{
-  width: 80%;
+  width: 90%;
 }
 @keyframes App-logo-spin {
   from {
