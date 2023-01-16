@@ -142,7 +142,8 @@ The server is a [basic Flask app](https://flask.palletsprojects.com/en/1.1.x/qui
 
 Start the server from the `SweetPea/server` directory in a new terminal tab or window.
 
-       python3 Server.py
+    cd server    
+    python3 Server.py
 
 The output should look similar to the following:
 ```
@@ -197,7 +198,7 @@ You can set [additional arguments](https://flask.palletsprojects.com/en/2.2.x/ap
 
 The website is an empty React application, bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Install the website's package modules from the `SweetPea/website` directory.
+In a new terminal tab or window, install the website's package modules from the `SweetPea/website` directory.
 
        npm install
 
