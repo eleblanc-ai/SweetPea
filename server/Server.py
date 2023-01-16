@@ -9,8 +9,9 @@ from datetime import datetime
 app = Flask(__name__)
 CORS(app)
 
-@app.route("/mySquare", methods = ['GET'])
-def mySquare():
+# square route and function from docs/add-endpoint
+@app.route("/square", methods = ['GET'])
+def square():
 
     args = dict(request.args.items())
 
@@ -21,7 +22,7 @@ def mySquare():
     except:
         return jsonify({"response":"Invalid argument, expected a numeric type."})
 
-# Return a time string to the client
+# Return a string with the current time
 @app.route("/time", methods = ['GET'])
 def time():
     return jsonify({'time': "The time is: "

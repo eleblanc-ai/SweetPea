@@ -44,20 +44,11 @@
 
 
 .App-button {
-  top:10vh;
-  border-radius: 25px;
-  padding:13px;
-  background-color: lightgray;
-  font-size: calc(13px + 2vmin);
-  filter: drop-shadow(2px 2px 3px #9d8a8e);
-
+  width:10vw;
 }
 
 .App-button:active {
-  background-color: dimgray;
-  color:white;
-  box-shadow: 0 1px #666;
-  transform: translateY(1px);
+
 }
 .time-response {
   font-size: calc(13px + 2vmin);
@@ -70,12 +61,25 @@
   padding:20px;
   background-color:lightsteelblue;
 }
+.App-endpoint-query-stack{
+}
+.endpoint-desc{
+  text-align: right;
+  color:purple;
+}
+.App-endpoint-label{
+  font-size: calc(10px + 2vmin);
+  color:#282c34;
+  font-family: monospace;
+  vertical-align: middle;
+
+}
 .App-link {
   color: #61dafb;
 }
 
 .alert-response{
-  width: 90%;
+  width:100%;
 }
 @keyframes App-logo-spin {
   from {

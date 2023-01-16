@@ -5,7 +5,7 @@ SweetPea is a tiny web development kit. It provides a client-server framework th
 It includes:
 
 * A website for your user interface(s)
-* An server for your back-end functionality
+* A server for your back-end functionality
 
 All you need to do is:
 1. Build a user interface for the website.
@@ -16,7 +16,7 @@ All you need to do is:
     * [Flask](https://flask.palletsprojects.com/en/2.2.x/) and [Python](https://www.python.org/)
   
     
-3. Call your API from the user interface to make your resources available to the website.
+3. Call your API from the user interface.
     * [HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
 
 

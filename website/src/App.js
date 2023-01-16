@@ -35,28 +35,28 @@ function App() {
 
 
     let vis = <div className="App">
-                {/* Demo header, replace with your own -- edit style in App.css  */}
-                <div className="App-header">
-                    <p>
-                        SweetPea: A tiny web development kit.
-                    </p>
-                </div>
-                {/* Main site content -- edit style in App.css */}
-                <div className="App-main-content">
+        {/* Demo header, replace with your own -- edit style in App.css  */}
+        <div className="App-header">
+            <p>
+                SweetPea: A tiny web development kit.
+            </p>
+        </div>
+        {/* Main site content -- edit style in App.css */}
+        <div className="App-main-content">
 
-                    {/* Demo button -- edit style in App.css */}
-                    {/* On click, demo button will call fetchTestMessage */}
-                    <Stack className="App-endpoint-stack" spacing={2} direction="row">
-                         <Button variant="contained" onClick={fetchTimeString}>Time</Button>
-                         <Alert className="alert-response" severity="success">{timeString}</Alert>
-                    </Stack>
+            {/* Demo button -- edit style in App.css */}
+            {/* On click, demo button will call fetchTestMessage */}
+            <Stack className="App-endpoint-stack" spacing={2} direction="row">
+                <Button variant="contained" onClick={fetchTimeString}>Time</Button>
+                <Alert className="alert-response" severity="success">{timeString}</Alert>
+            </Stack>
 
-                </div>
-            </div>
+        </div>
+    </div>
 
-  return (
-      <div>{vis}</div>
-  );
+    return (
+        <div>{vis}</div>
+    );
 }
 
 export default App;
