@@ -19,6 +19,13 @@ All you need to do is:
 3. Call your API from the user interface.
     * [HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
 
+Figure 1 gives an architecture overview of the SweetPea web development kit. Visit the [glossary](docs/glossary.md) for term definitions.
+
+<p align="center">
+<br/>
+  <img src="docs/fig/readme/architecture-overview.png" alt="A screen capture of the launched website with the title `SweetPea: A tiny web app template` and a button labeled "Click for test message."/>
+</p>
+<p align="center">Figure 1. SweetPea architecture overview.</p>
 
 <!--SweetPea is yet to become a website builder, hosting service, or production environment.-->
 
@@ -156,7 +163,7 @@ Press CTRL+C to quit
  * Debugger is active!
  * Debugger PIN: 285-622-087
 ```
-You can check that the server's demo endpoint is available by visiting http://localhost:5000/time in a browser, as shown in Figure 3.
+You can check that the server's demo endpoint is available by visiting http://localhost:5000/time in a browser, as shown in Figure 2.
 
 <p align="center">
 <br/>
@@ -227,11 +234,11 @@ To create a production build, use npm run build.
 webpack compiled successfully
 
 ```
-NPM should automatically open the website, shown in Figure 1 below. Otherwise, you can navigate to http://localhost:3000 to visit the website in your browser, as shown in Figure 2.
+NPM should automatically open the website, shown in Figure 1 below. Otherwise, you can navigate to http://localhost:3000 to visit the website in your browser, as shown in Figure 3.
 <p align="center">
   <img src="docs/fig/readme/test-website.png" alt="A screen capture of the launched website with the title `SweetPea: A tiny web development kit` and a button labeled "Press for test message."/>
 </p>
-<p align="center">Figure 1. Launching the website.</p>
+<p align="center">Figure 3. Launching the website.</p>
 
 You can optionally [change the hostname and port for the website](https://dev.to/kevinmel2000/nodejs-reactjs-change-host-and-port-number-70b).
 
@@ -247,7 +254,7 @@ In the website, press the button to make a request to the server for a test mess
 <p align="center">
   <img src="docs/fig/readme/test-connection.png" style="border: 2px solid #555" alt="A screen capture of a mouse clicking the `Press for test message button` in the website." The response appears below the button, reading "Hello, SweetPea!"/>
 </p>
-<p align="center">Figure 3. Testing for communication between the website and server.</p>
+<p align="center">Figure 4. Testing for communication between the website and server.</p>
 
 
 # Next steps for you
