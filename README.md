@@ -23,7 +23,7 @@ Figure 1 gives an architecture overview of the SweetPea web development kit. Vis
 
 <p align="center">
 <br/>
-  <img src="docs/fig/readme/architecture-overview.png" alt="A screen capture of the launched website with the title `SweetPea: A tiny web app template` and a button labeled "Click for test message."/>
+  <img src="docs/fig/readme/architecture-overview.png" alt="Overview of SweetPea architecture."/>
 </p>
 <p align="center">Figure 1. SweetPea architecture overview.</p>
 
