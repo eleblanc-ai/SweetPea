@@ -24,8 +24,8 @@ Date: 1/10/23
 
 ## D
 * **Dynamic web application** -- A web application that facilitates direct change and update to:
-  * a web page on the front end, and/or 
-  * a software resource on the back end 
+  * a web page on the front end, and/or
+  * a software resource on the back end
 
 ## E
 * **Endpoint** -- See API endpoint.
@@ -67,7 +67,7 @@ Date: 1/10/23
 * **UI Components** -- Elements of a UI that facilitate input control, navigation, and information display.
 
 ## W
-* **Web Application** (also, Web App) -- A software system accessed through an internet browser.
+* **Web Application** (also, Web App) -- A software system accessed through an internet browser, consisting of a front end and a back end.
 
 
 * **Web Page** -- A hypertext document displayed in an internet browser.

@@ -1,5 +1,5 @@
 # Create web applications with SweetPea
-SweetPea is a tiny web development kit. It provides a client-server framework that any developer can use to build a dynamic web application. SweetPea is intended for prototyping, learning, and having fun with web applications. 
+SweetPea is a tiny web development kit. It provides a client-server framework that any developer can use to build a dynamic web application. SweetPea is intended for prototyping, learning, and having fun with web applications.
 
 
 It includes:
@@ -14,8 +14,8 @@ All you need to do is:
 
 2. Develop software resources and create an Application Programming Interface (API) for the server.
     * [Flask](https://flask.palletsprojects.com/en/2.2.x/) and [Python](https://www.python.org/)
-  
-    
+
+
 3. Call your API from the user interface.
     * [HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
 
@@ -110,7 +110,7 @@ v18.9.0-->
 <!-- $ python3 --version
 Python 3.10.6 -->
 
-> 💡️ Optionally, use [pyenv](https://github.com/pyenv/pyenv) for version management. 
+> 💡️ Optionally, use [pyenv](https://github.com/pyenv/pyenv) for version management.
 
 4. [Flask](https://flask.palletsprojects.com/en/2.2.x/) -- *a web app framework for mapping HTTP requests from the website to Python functions.*
 
@@ -198,7 +198,7 @@ You can set [additional arguments](https://flask.palletsprojects.com/en/2.2.x/ap
 
 The website is an empty React application, bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-In a new terminal tab or window, install the website's package modules from the `SweetPea/website` directory.
+In a new terminal tab or window, install the website's dependencies to the `SweetPea/website` directory.
 
        npm install
 
@@ -262,17 +262,17 @@ In the website, press the button to make a request to the server for a test mess
 
 
 * Try a tutorial:
-  * [Creating an API endpoint](docs/add-endpoint.md)
+    * [Creating an API endpoint](docs/add-endpoint.md)
 
 
 * Check out the [glossary](docs/glossary.md).
 
 
-* Check out some external resources: 
+* Check out some external resources:
 
-  * [Learn how to build a user interface with React](https://reactjs.org/tutorial/tutorial.html).
-  * [Learn how to develop a Flask server](https://flask.palletsprojects.com/en/2.2.x/quickstart/#a-minimal-application).
-  * [Creating APIs with Python and Flask](https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flask)
+    * [Learn how to build a user interface with React](https://reactjs.org/tutorial/tutorial.html).
+    * [Learn how to develop a Flask server](https://flask.palletsprojects.com/en/2.2.x/quickstart/#a-minimal-application).
+    * [Creating APIs with Python and Flask](https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flask)
 
 
 * Stay tuned for more documentation, tutorials, and new features.

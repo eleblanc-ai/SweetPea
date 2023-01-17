@@ -20,7 +20,7 @@ On the website side (i.e., in `SweetPea/website/src/App.js`), the demo uses the 
 ```
 <br/>
 
-Next, the `fetchTimeString()` function uses [JavaScript's fetch method](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) to make an HTTP request to the server for a test message at the `time` endpoint. Then, the function updates the value of the state variable `time` with the response string.
+Next, the `fetchTimeString()` function uses [JavaScript's fetch method](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) to make an HTTP request to the server for a test message at the `time` endpoint. Then, the function updates the value of `time` with the response string.
 
 ```
 const fetchTimeString = () => {
@@ -32,7 +32,7 @@ const fetchTimeString = () => {
         })
 ```
 
-Just to the right of the HTML button, the value of `timeString` is evaluated and displayed on the screen in an [`Alert` component](https://mui.com/material-ui/react-alert/).
+The value of `timeString` is evaluated and displayed on the screen in an [`Alert` component](https://mui.com/material-ui/react-alert/).
 
 
 <!-- [React Hooks](https://reactjs.org/docs/hooks-intro.html).*-->
@@ -64,7 +64,7 @@ Back on the website side, `fetchTimeString()` receives the server's response and
 * Try a tutorial:
     * [Creating an API endpoint](add-endpoint.md)
 
-* 
+*
 * Check out the [glossary](docs/glossary.md).
 
 
@@ -72,7 +72,7 @@ Back on the website side, `fetchTimeString()` receives the server's response and
     * [Learn how to build a user interface with React](https://reactjs.org/tutorial/tutorial.html).
     * [Learn how to develop a Flask server](https://flask.palletsprojects.com/en/2.2.x/quickstart/#a-minimal-application).
 
-    
+
 * Stay tuned for more documentation, tutorials, and new features.
 
 ---
