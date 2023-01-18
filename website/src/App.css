@@ -21,13 +21,13 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: lightslategray;
   min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(15px + 2vmin);
+  font-size: calc(16px + 2vmin);
   color: #ECEBEB;
 }
 
@@ -79,4 +79,12 @@
 
 .alert-response{
   width:100%;
+}
+.App-fig{
+  width:70vw;
+}
+.SweetPea-tab{
+  font-size:2.5vh;
+  color:black;
+  text-align: left;
 }
