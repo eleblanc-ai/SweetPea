@@ -32,9 +32,8 @@
 }
 
 .App-main-content {
-  padding-top:8vh;
   background-color: #ECEBEB;
-  min-height: 80vh;
+  min-height: 90vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -80,12 +79,4 @@
 
 .alert-response{
   width:100%;
-}
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

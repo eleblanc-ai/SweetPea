@@ -1,0 +1,38 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: SweetPea demo API
+  description: A demo API to illustrate the endpoint concept in SweetPea.
+
+servers:
+  - url: http://localhost:5000
+
+paths:
+  /time:
+    get:
+      description: Returns a string with the current time.
+
+      responses:
+        '200':
+          description: Successfully returned a string with the current time.
+        '400':
+          description: Invalid request.
+
+  /square:
+    get:
+      description: Returns the square of the x argument.
+
+      parameters:
+        - name: x
+          in: query
+          description: The integer to be squared.
+          schema:
+            type: integer
+
+      responses:
+        '200':
+          description: Successfully returned the square of the x argument.
+        '400':
+          description: Invalid request.
+
+

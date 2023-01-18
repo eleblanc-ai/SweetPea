@@ -9,7 +9,7 @@ from datetime import datetime
 app = Flask(__name__)
 CORS(app)
 
-# square route and function from docs/add-endpoint
+#
 @app.route("/square", methods = ['GET'])
 def square():
 
@@ -22,11 +22,11 @@ def square():
     except:
         return "Invalid request", 400
 
-    # Return a string with the current time
+# Returns a string with the current time
 @app.route("/time", methods = ['GET'])
 def time():
     return jsonify({'time': "The time is: "
-                            + str(datetime.now().strftime("%H:%M:%S"))}),200
+                            + str(datetime.now().strftime("%H:%M:%S"))}), 200
 
 # Return parsed command line arguments and/or those set to default values.
 def parseArgs(argv=None):
