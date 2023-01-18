@@ -1,8 +1,7 @@
-
-* **Client<!--
+<!--
 SweetPea: Glossary
 Author: Emily LeBlanc
-Date: 1/10/23
+Date: 1/18/23
 -->
 
 # Glossary

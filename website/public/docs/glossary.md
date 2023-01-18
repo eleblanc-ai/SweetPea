@@ -1,26 +1,7 @@
 <!--
 SweetPea: Glossary
 Author: Emily LeBlanc
-Date: 1/10/23
--->
-
-# Glossary
-## A
-* **Application Programming Interface (API)** -- A program that facilitates data transfer between the front end and back end (via HTTP).
-
-
-* **API endpoint** (also Endpoint)-- A URL mapped to a resource on the back end.
-
-## B
-
-* **Back end** -- Your API and resources.
-* **Back-end functionality** -- A collection of software resources made available via the API.
-
-## C
-* **Client<!--
-SweetPea: Glossary
-Author: Emily LeBlanc
-Date: 1/10/23
+Date: 1/18/23
 -->
 
 # Glossary
