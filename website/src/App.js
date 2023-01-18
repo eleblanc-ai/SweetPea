@@ -19,19 +19,13 @@ import Tab from '@mui/material/Tab';
 import {SERVER_HOSTNAME, SERVER_PORT, TIME_ENDPOINT} from "./consts";
 
 
-interface TabPanelProps {
-    children?: React.ReactNode;
-    index: number;
-    value: number;
-}
-
 function App() {
 
     /* testMessage state variable initialized to empty string*/
     const [timeString, setTimeString] = useState('');
 
-    /*  */
-    const [tabIndex, setTabIndex] = useState(0);
+    /* Material tab logic from: https://codingbeautydev.com/blog/material-ui-tabs/ */
+    const [tabIndex, setTabIndex] = useState(1);
     const handleTabChange = (event, newTabIndex) => {
         setTabIndex(newTabIndex);
     };
@@ -46,11 +40,10 @@ function App() {
             .then(data => {
                 setTimeString("[Response] " + data.time)
             })
-    }
+    };
 
     {/* vis variable stores page HTML and JS */}
     let vis = <div className="App">
-
 
         {/* Demo header, replace with your own -- edit style in App.css  */}
         <div className="App-header">
@@ -59,29 +52,50 @@ function App() {
             </p>
         </div>
 
-
-
         {/* Main site content -- edit style in App.css */}
-
-
         <div className="App-main-content">
 
             <Tabs value={tabIndex} onChange={handleTabChange}>
-                <Tab label="Demo" />
-                <Tab label="API" />
+                <Tab label="SweetPea" />
+                <Tab label="Demo UI" />
+                <Tab label="Demo API" />
                 <Tab label="Docs" />
-                <Tab label="About SweetPea" />
+                <Tab label="About" />
 
             </Tabs>
             <br/>
 
+            {/* SweetPea tab -- edit style in App.css */}
+            {tabIndex === 0 && (
+                <p>README intro and link to repository here</p>
+            )}
 
-            {/* Demo button -- edit style in App.css */}
-            {/* On click, demo button will call fetchTestMessage */}
-            <Stack className="App-endpoint-stack" spacing={2} direction="row">
-                <Button variant="contained" onClick={fetchTimeString}>Time</Button>
-                <Alert className="alert-response" severity="success">{timeString}</Alert>
-            </Stack>
+            {/* Demo tab -- edit style in App.css */}
+            {tabIndex === 1 && (
+
+                <Stack className="App-endpoint-stack" spacing={2} direction="row">
+                    <Button variant="contained" onClick={fetchTimeString}>Time</Button>
+                    <Alert className="alert-response" severity="success">{timeString}</Alert>
+                </Stack>
+            )}
+
+            {/* API tab -- edit style in App.css */}
+            {tabIndex === 2 && (
+                <p>The API tab</p>
+            )}
+
+            {/* Documentation (docs) tab -- edit style in App.css */}
+            {tabIndex === 3 && (
+                <p>All documentation grouped by type (e.g., overviews, tutorials)</p>
+            )}
+
+            {/* About tab -- edit style in App.css */}
+            {tabIndex === 4 && (
+                <p>Links, changelog, contact, license</p>
+            )}
+
+
+
 
         </div>
 
