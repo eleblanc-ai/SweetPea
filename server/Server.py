@@ -17,16 +17,16 @@ def square():
 
     try:
         x = int(args['x'])
-        return jsonify({"response":x*x})
+        return jsonify({"response":x*x}), 200
 
     except:
-        return jsonify({"response":"Invalid argument, expected a numeric type."})
+        return "Invalid request", 400
 
-# Return a string with the current time
+    # Return a string with the current time
 @app.route("/time", methods = ['GET'])
 def time():
     return jsonify({'time': "The time is: "
-                            + str(datetime.now().strftime("%H:%M:%S"))})
+                            + str(datetime.now().strftime("%H:%M:%S"))}),200
 
 # Return parsed command line arguments and/or those set to default values.
 def parseArgs(argv=None):
