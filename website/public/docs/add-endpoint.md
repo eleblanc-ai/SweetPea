@@ -109,7 +109,7 @@ Congratulations, you can now add functionality to the server! In practice, you c
 * If you want to start digging around the code, check out these starting points for the website and server:
 
   * Website:
-    * [`website/src/App.js`](website/src/App.js)
+    * [`website/src/App-v1.js`](website/src/App.js)
   * Server:
     * [`server/Server.py`](server/Server.py)
 

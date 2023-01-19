@@ -203,7 +203,7 @@ You can set [additional arguments](https://flask.palletsprojects.com/en/2.2.x/ap
 
 ### 3. Launch the website
 
-The website is an empty React application, bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The website is an empty React application, bootstrapped with [Create React AppV1](https://github.com/facebook/create-react-app).
 
 In a new terminal tab or window, install the website's dependencies to the `SweetPea/website` directory.
 
@@ -263,7 +263,7 @@ In the website, press the button to make a request to the server for a test mess
 * If you want to start digging around the code, check out these starting points for the website and server:
 
     * Website:
-        * [`website/src/App.js`](website/src/App.js)
+        * [`website/src/AppV1.js`](website/src/App-v1.js)
     * Server:
         * [`server/Server.py`](server/Server.py)
 

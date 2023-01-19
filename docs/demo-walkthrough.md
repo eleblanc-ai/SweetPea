@@ -13,7 +13,7 @@ A walkthrough of the demo web app demonstrated in `README.md`.
 <p align="center">Figure 1. Communication between the website and server.</p> 
 
 
-On the website side (i.e., in `SweetPea/website/src/App.js`), the demo uses the `onClick()` function of an [Material UI React button](https://mui.com/material-ui/react-button/) to request a test message from the server.
+On the website side (i.e., in `SweetPea/website/src/App-v1.js`), the demo uses the `onClick()` function of an [Material UI React button](https://mui.com/material-ui/react-button/) to request a test message from the server.
 
 ```
 <Button variant="contained" onClick={fetchTimeString}>Time</Button>
@@ -56,7 +56,7 @@ Back on the website side, `fetchTimeString()` receives the server's response and
 * If you want to start digging around the code, check out these starting points for the website and server:
 
     * Website:
-        * [`website/src/App.js`](website/src/App.js)
+        * [`website/src/App-v1.js`](website/src/App-v1.js)
     * Server:
         * [`server/Server.py`](server/Server.py)
 

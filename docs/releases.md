@@ -34,7 +34,7 @@ This page contains all release notes for SweetPea.
 * **Features**:
     * Core website:
         * Ready-to-develop front end _(React 18.2.0)_
-            * Blank React web app _(bootstrapped with [Create React App](https://github.com/facebook/create-react-app))_
+            * Blank React web app _(bootstrapped with [Create React AppV1](https://github.com/facebook/create-react-app))_
             * Demo UI element
     * Core server:
         * Ready-to-develop back end _(Flask 2.2.2)_
@@ -50,7 +50,7 @@ This page contains all release notes for SweetPea.
 * **Features**:
     * Core website:
         * Ready-to-develop front end _(React 18.2.0)_
-            * Blank React web app _(bootstrapped with [Create React App](https://github.com/facebook/create-react-app))_
+            * Blank React web app _(bootstrapped with [Create React AppV1](https://github.com/facebook/create-react-app))_
             * Demo UI element
     * Core server:
         * Ready-to-develop back end _(Flask 2.2.2)_
