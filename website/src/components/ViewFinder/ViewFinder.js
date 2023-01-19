@@ -3,19 +3,12 @@ import './ViewFinder.css';
 
 
 import DemoView from '../Views/DemoView/DemoView.js';
-import APIView from '../Views/APIView/APIView.js';
 import DocsView from '../Views/DocsView/DocsView.js';
 import AboutView from '../Views/AboutView/AboutView.js';
 
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
-
-
-// import CreateView from './Views/CreateView/CreateView.js';
-// import DocsView from './Views/DocsView/DocsView.js';
-// import LearnView from './Views/LearnView/LearnView.js';
-// import MeetView from './Views/MeetView/MeetView.js';
 
 
 function ViewFinder(props) {
@@ -29,9 +22,8 @@ function ViewFinder(props) {
 
     let viewToClass = {
         0:<DemoView/>,
-        1:<APIView/>,
-        2:<DocsView/>,
-        3:<AboutView/>
+        1:<DocsView/>,
+        2:<AboutView/>
     //   // "create":<CreateView changeView={this.props.handleViewChange}/>
     //   // "find":<DocsView changeView={this.props.handleViewChange}/>,
     //   // "learn":<LearnView changeView={this.props.handleViewChange}/>,
@@ -47,10 +39,9 @@ function ViewFinder(props) {
                       value={tabIndex}
                       onChange={handleTabChange}>
 
-                    <Tab sx={{fontSize:18}} label="Demo"/>
-                    <Tab sx={{fontSize:18}} label="API"/>
-                    <Tab sx={{fontSize:18}} label="Docs" />
-                    <Tab sx={{fontSize:18}} label="About" />
+                    <Tab sx={{fontSize:17}} label="Demo"/>
+                    <Tab sx={{fontSize:17}} label="Docs" />
+                    <Tab sx={{fontSize:17}} label="About" />
                 </Tabs>
             </Box>
             {viewToClass[tabIndex]}
