@@ -1,77 +1,3 @@
-# Create web applications with SweetPea
-SweetPea is a tiny web development kit. It provides a client-server framework that any developer can use to build a dynamic web application. SweetPea is intended for prototyping, learning, and having fun with web applications.
-
-
-It includes:
-
-* A website for your user interface(s)
-* A server for your back-end functionality
-
-All you need to do is:
-1. Build a user interface for the website.
-    * [ReactJS](https://reactjs.org), [HTML](https://www.w3schools.com/html/), and [CSS](https://www.w3schools.com/css/)
-
-
-2. Develop software resources and create an Application Programming Interface (API) for the server.
-    * [Flask](https://flask.palletsprojects.com/en/2.2.x/) and [Python](https://www.python.org/)
-
-
-3. Call your API from the user interface.
-    * [HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
-
-Figure 1 gives an architecture overview of the SweetPea web development kit. Visit the [glossary](docs/glossary.md) for term definitions.
-
-<p align="center">
-<br/>
-  <img src="docs/fig/readme/architecture-overview.png" alt="Overview of SweetPea architecture."/>
-</p>
-<p align="center">Figure 1. SweetPea architecture overview.</p>
-
-<!--SweetPea is yet to become a website builder, hosting service, or production environment.-->
-
-## Release Notes
-<!-- Semantic versioning: https://semver.org/-->
-<!-- Major change x.0.0
-     Minor change 0.x.0
-     Bug fix      0.0.x -->
-
-<!-- https://simonwillison.net/2022/Jan/31/release-notes/ -->
-<!-- https://www.productplan.com/learn/release-notes-best-practices/ -->
-
-* **Version**: 2.0.0
-
-* **Date**: Jan 12, 2023
-
-* **Changes**:
-    * Created new Glossary
-    * Refactored "Core Website" and "Core Server" to "Website" and "Server"
-        * Incompatible with previous v1.0.1
-    * Updated documentation in compliance with new Glossary
-    * Moved `resources` directory to `server` directory.
-    * Moved documentation figures from `resources` to `docs` directory.
-
-* **Features**:
-    * Website:
-        * Ready-to-develop front end _(React 18.2.0)_
-            * React/JS web app for user interface
-            * Demo UI element
-    * Server:
-        * Ready-to-develop back end _(Flask 2.2.2)_
-            * Demo server for API and software resources
-            * Demo API and resource
-
-[See all release notes.](docs/releases.md)
-
-## Table of Contents
-
-* [Get started with SweetPea](#Get-started-with-SweetPea)
-    * [Install the requirements](#install-requirements)
-    * [Start the server](#start-server)
-    * [Launch the website](#launch-website)
-    * [Test website and server communication](#communication)
-* [Next steps for you](#Next-steps-for-you)
-* [License](#License)
-
 ## Get started with SweetPea
 > ⚠️ These instructions were tested on a laptop running macOS Monterey 12.6 with an M1 chip.
 
@@ -160,13 +86,13 @@ Press CTRL+C to quit
  * Debugger is active!
  * Debugger PIN: 285-622-087
 ```
-You can check that the server's demo endpoint is available by visiting http://localhost:5000/time in a browser, as shown in Figure 2.
+You can check that the server's demo endpoint is available by visiting http://localhost:5000/time in a browser, as shown in Figure 1.
 
 <p align="center">
 <br/>
-  <img src="docs/fig/readme/test-server.png" alt="A screen capture of the launched website with the title `SweetPea: A tiny web app template` and a button labeled "Click for test message."/>
+  <img src="./fig/readme/test-server.png" alt="A screen capture of the launched website with the title `SweetPea: A tiny web app template` and a button labeled "Click for test message."/>
 </p>
-<p align="center">Figure 2. Testing the server's demo endpoint.</p>
+<p align="center">Figure 1. Testing the server's demo endpoint.</p>
 
 The server optionally accepts arguments for hostname, port, threaded mode, and debug mode as follows:
 ```
@@ -200,7 +126,7 @@ You can set [additional arguments](https://flask.palletsprojects.com/en/2.2.x/ap
 
 ### 3. Launch the website
 
-The website is an empty React application, bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The website is an empty React application, bootstrapped with [Create React AppV1](https://github.com/facebook/create-react-app).
 
 In a new terminal tab or window, install the website's dependencies to the `SweetPea/website` directory.
 
@@ -231,11 +157,11 @@ To create a production build, use npm run build.
 webpack compiled successfully
 
 ```
-NPM should automatically open the website, shown in Figure 3 below. Otherwise, you can navigate to http://localhost:3000 to visit the website in your browser.
+NPM should automatically open the website, shown in Figure 2 below. Otherwise, you can navigate to http://localhost:3000 to visit the website in your browser.
 <p align="center">
-  <img src="docs/fig/readme/test-website.png" alt="A screen capture of the launched website with the title `SweetPea: A tiny web development kit` and a button labeled "Press for test message."/>
+  <img src="./fig/readme/test-website.png" alt="A screen capture of the launched website with the title `SweetPea: A tiny web development kit` and a button labeled "Press for test message."/>
 </p>
-<p align="center">Figure 3. Launching the website.</p>
+<p align="center">Figure 2. Launching the website.</p>
 
 You can optionally [change the hostname and port for the website](https://dev.to/kevinmel2000/nodejs-reactjs-change-host-and-port-number-70b).
 
@@ -246,12 +172,12 @@ You can optionally [change the hostname and port for the website](https://dev.to
 Now that the website and server are both online, you can verify that the two can talk to each other.
 The website comes with a small demo that lets you test for communication between the website and server.
 
-In the website, press the button to make a request to the server for a test message. If the request is successful, the response appears below the button, as shown in Figure 4.
+In the website, press the button to make a request to the server for a test message. If the request is successful, the response appears below the button, as shown in Figure 3.
 
 <p align="center">
-  <img src="docs/fig/readme/test-connection.png" style="border: 2px solid #555" alt="A screen capture of a mouse clicking the `Press for test message button` in the website." The response appears below the button, reading "Hello, SweetPea!"/>
+  <img src="./fig/readme/test-connection.png" alt="A screen capture of a mouse clicking the `Press for test message button` in the website." The response appears below the button, reading "Hello, SweetPea!"/>
 </p>
-<p align="center">Figure 4. Testing for communication between the website and server.</p>
+<p align="center">Figure 3. Testing for communication between the website and server.</p>
 
 
 # Next steps for you
@@ -280,33 +206,8 @@ In the website, press the button to make a request to the server for a test mess
 
 
 * Stay tuned for more documentation, tutorials, and new features.
-
-# License
-MIT License
-
-Copyright (c) 2022 Emily LeBlanc
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
 ---
 <p align="center">
-  <img style="width:100%" src="docs/fig/sweetpea-banner.png" alt="An impressionist-style painting of a field of SweetPeas. Original image created with OpenAI's DALL·E 2."/>
+  <img style="width:100%" src="../docs/fig/sweetpea-banner.png" alt="An impressionist-style painting of a field of SweetPeas. Original image created with OpenAI's DALL·E 2."/>
 
 </p>
-

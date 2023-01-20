@@ -1,1 +1,5 @@
-.demo-view{padding:4vh;}
+.demo-view{
+    padding:4vh;
+    width:80vw;
+    margin:auto;
+}
