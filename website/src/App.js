@@ -3,7 +3,7 @@
 /* Date: 1/19/2023 */
 
 // import React, { useState } from 'react';
-import React, {useState} from 'react';
+import React from 'react';
 
 
 
@@ -18,13 +18,6 @@ function App() {
 
     var initialView = "demo"
 
-    /* Material tab logic from: https://codingbeautydev.com/blog/material-ui-tabs/ */
-    const [tabIndex, setTabIndex] = useState(0);
-    const handleTabChange = (event, newTabIndex) => {
-        setTabIndex(newTabIndex);
-    };
-
-    const [value, setValue] = React.useState(0);
 
 
     return (
