@@ -287,7 +287,7 @@ In the website, press the button to make a request to the server for a test mess
 # License
 MIT License
 
-Copyright (c) 2022 Emily LeBlanc
+Copyright (c) 2023 Emily LeBlanc
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
