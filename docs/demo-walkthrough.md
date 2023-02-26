@@ -8,7 +8,7 @@ Date: 1/10/23
 A walkthrough of the demo web app demonstrated in `README.md`.
 
 <p align="center">
-  <img src="fig/demo-walkthrough/test-connection.png" style="border: 2px solid #555; width:65%" alt="A screen capture of a mouse clicking the `Press for test message button` in the website." The response appears below the button, reading "Hello, SweetPea!"/>
+  <img src="fig/demo-walkthrough/test-connection.png" style="border: 2px solid #555; width:55%" alt="A screen capture of a mouse clicking the `Press for test message button` in the website." The response appears below the button, reading "Hello, SweetPea!"/>
 </p>
 <p align="center">Figure 1. Communication between the website and server.</p> 
 
