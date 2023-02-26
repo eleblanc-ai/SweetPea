@@ -167,7 +167,7 @@ You can check that the server's demo endpoint is available by visiting http://lo
 
 <p align="center">
 <br/>
-  <img src="docs/fig/readme/test-server.png" alt="A screen capture of the launched website with the title `SweetPea: A tiny web app template` and a button labeled "Click for test message."/>
+  <img src="docs/fig/readme/test-server.png" alt="A screen capture of the server's response accessed via browser."/>
 </p>
 <p align="center">Figure 2. Testing the server's demo endpoint.</p>
 
@@ -205,14 +205,12 @@ You can set [additional arguments](https://flask.palletsprojects.com/en/2.2.x/ap
 
 The website is an empty React application, bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-In a new terminal tab or window, install the website's dependencies to the `SweetPea/website` directory.
+In a new terminal tab or window, navigate to the `SweetPea/website` directory and install the website's dependencies. Due to software dependencies used by Create React App, the following instruction may produce warnings about vulnerabilities, which you can disregarded or investigate further (see the note below). 
 
+      
        npm install
 
 > ⚠️ At this step, `npm audit` (which is run automatically as part of `npm install`) is [likely to report security vulnerabilities in dependency packages](https://overreacted.io/npm-audit-broken-by-design/). You can choose to [ignore the audit report](https://www.voitanos.io/blog/don-t-be-alarmed-by-vulnerabilities-after-running-npm-install/#how-should-you-handle-these-audit-reports). Otherwise, check out NPM's documentation on [auditing dependency packages for security vulnerabilities](https://docs.npmjs.com/auditing-package-dependencies-for-security-vulnerabilities).
-
-
-<!-- If you choose instead to dig into any warnings that come up, then I recommend first checking out NPM's documentation on [auditing packages for security vulnerabilities](https://docs.npmjs.com/auditing-package-dependencies-for-security-vulnerabilities).--> 
 
 Next, build and start the website.
 
