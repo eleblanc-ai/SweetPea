@@ -85,7 +85,7 @@ In a terminal, navigate to the directory where you plan to install SweetPea and 
 <a name="install-requirements">
 
 ### 1. Install the requirements
-There are a few ways to install the project requirements. I used [Homebrew](https://brew.sh/), [NPM](https://docs.npmjs.com/), and [pip](https://pip.pypa.io/en/stable/).
+There are a few ways to install the project requirements. I used [Homebrew](https://brew.sh/), [NPM](https://docs.npmjs.com/), and [pip](https://pip.pypa.io/en/stable/). Make sureyou have the latest versions of these tools installed to avoid installation headaches.
 
 To follow the instructions below, [install Homebrew ahead of time](https://brew.sh/). NPM and pip are installed automatically with NodeJS and Python3, respectively.
 
