@@ -64,7 +64,6 @@ Back on the website side, `fetchTimeString()` receives the server's response and
 * Try a tutorial:
     * [Creating an API endpoint](add-endpoint.md)
 
-*
 * Check out the [glossary](docs/glossary.md).
 
 
